@@ -3,545 +3,644 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BeCulture — Módulo de Billing · Estratégia</title>
+  <title>Módulo de Billing — Estratégia · BeCulture</title>
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/presentation.css">
+  <link rel="stylesheet" href="assets/billing.css">
 </head>
 <body>
 
-<div class="presentation" id="pres">
+<div class="layout">
 
-  <button class="nav-btn prev" onclick="go(-1)" aria-label="Slide anterior">&#8592;</button>
-  <button class="nav-btn next" onclick="go(1)" aria-label="Próximo slide">&#8594;</button>
-  <div class="nav-dots" id="dots"></div>
+  <aside class="sidebar">
+    <div class="brand"><span class="dot">◆</span> Billing · BeCulture</div>
 
-  <!-- 01 · CAPA -->
-  <section class="slide slide-cover active">
-    <div class="slide-content">
-      <div class="slide-top">
-        <div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div>
-      </div>
+    <div class="sidebar-progress">
+      <div class="progress-label">Progresso do checklist</div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="progress-count" id="progress-count">0 de 0 validados</div>
+    </div>
+
+    <div class="group-label">Visão</div>
+    <a class="active" href="#visao"><span class="ico">⌂</span> Visão geral</a>
+    <a href="#objetivo"><span class="ico">◎</span> Objetivo</a>
+    <a href="#rtb"><span class="ico">↗</span> Reason to Believe</a>
+    <a href="#checklist"><span class="ico">✓</span> Checklist de decisões</a>
+
+    <div class="group-label">Premissas</div>
+    <a href="#premissas-negocio"><span class="ico">$</span> Negócio</a>
+    <a href="#premissas-tecnicas"><span class="ico">⚙</span> Técnicas</a>
+
+    <div class="group-label">Arquitetura</div>
+    <a href="#camadas"><span class="ico">▣</span> Três camadas</a>
+    <a href="#produto"><span class="ico">◇</span> Módulo cliente</a>
+    <a href="#gerenciamento"><span class="ico">⚑</span> Backoffice & CS</a>
+    <a href="#gateway"><span class="ico">⟳</span> Gateway (Iugu)</a>
+
+    <div class="group-label">Avançar</div>
+    <a href="#nice-to-have"><span class="ico">+</span> Nice to have</a>
+    <a href="#duvidas"><span class="ico">?</span> Em aberto</a>
+    <a href="#versoes"><span class="ico">→</span> Roadmap</a>
+    <a href="#proximos-passos"><span class="ico">★</span> Próximos passos</a>
+  </aside>
+
+  <main class="content">
+
+    <!-- VISÃO GERAL -->
+    <section id="visao" class="section-block">
       <div class="page-head">
-        <span class="eyebrow">Estratégia de Produto · Junho 2026</span>
-        <h1 class="cover-title">Módulo de <em>Billing</em></h1>
-        <p class="lead">Premissas · Camadas · Versões</p>
-        <div class="gap-md"></div>
-        <div class="badge-row">
-          <span class="badge">Self-service</span>
-          <span class="badge">Assinatura</span>
-          <span class="badge">Gateway</span>
-        </div>
+        <span class="eyebrow">Estratégia de Produto · Reunião 12 Jun 2026</span>
+        <h1>Módulo de <em>Billing</em></h1>
+        <p class="lead">Documento interativo para alinhar premissas, validar decisões e avançar com o módulo de cobrança self-service da plataforma BeCulture. Baseado na reunião estratégica entre Renato Teixeira e Mike Araujo.</p>
       </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 02 · OBJETIVO -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Objetivo</span>
-        <h2 class="slide-title">Garantir a visão self-service da plataforma.</h2>
-        <p class="lead">O módulo de Billing existe para que <strong class="hi">todos os módulos da Greg</strong> possam ser contratados e utilizados de ponta a ponta pelo próprio cliente — sem depender de suporte ou financeiro.</p>
+      <div class="stats-row">
+        <div class="stat-card"><div class="num">3</div><div class="lbl">Camadas</div></div>
+        <div class="stat-card"><div class="num">3</div><div class="lbl">Versões</div></div>
+        <div class="stat-card"><div class="num">4</div><div class="lbl">Dúvidas</div></div>
+        <div class="stat-card"><div class="num">6</div><div class="lbl">Nice to have</div></div>
       </div>
-      <div class="slide-body">
-        <div class="callout">
-          <div class="t">Jornada end-to-end</div>
-          <p>Criar o arcabouço de uma <em>jornada end-to-end</em> do usuário: contratação, pagamento, acesso e gestão da assinatura.</p>
-        </div>
-      </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 03 · REASON TO BELIEVE -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Reason to Believe</span>
-        <h2 class="slide-title">Menos fricção. Mais resultado.</h2>
+      <div class="tag-row">
+        <span class="tag">Self-service</span>
+        <span class="tag">Assinatura recorrente</span>
+        <span class="tag">Pacotes</span>
+        <span class="tag">Iugu</span>
+        <span class="tag">Greg / Recruta separados</span>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-2 fill">
-          <div class="card">
-            <span class="card-kicker">Para o cliente</span>
-            <h3>Jornada mais fácil</h3>
-            <p>Contratação em minutos — não semanas. Setup, onboarding e uso imediatos.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Para a BeCulture</span>
-            <h3>Crescimento escalável</h3>
-            <p>Incremento de faturamento, usuários, coleta de dados e performance interna.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Operação</span>
-            <h3>Menos dependência</h3>
-            <p>Menos passos com time de suporte e financeiro para cada nova contratação.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Plataforma</span>
-            <h3>Modelo coerente</h3>
-            <p>Billing alinhado à promessa de uma plataforma verdadeiramente self-service.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 04 · PREMISSAS DE NEGÓCIO (1) -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Premissas de Negócio</span>
-        <h2 class="slide-title">Modelo de cobrança e assinatura.</h2>
+      <div class="callout">
+        <div class="t">Como usar este documento</div>
+        <p style="margin:0">Navegue pelas seções na barra lateral. Use o <b>checklist</b> para marcar o que já foi validado com o time — o progresso fica salvo no navegador. Dúvidas em aberto precisam de decisão antes de implementar.</p>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-2 fill">
-          <div class="card">
-            <span class="card-kicker">Premissa 01</span>
-            <h3>Cobrança por usuário ativo</h3>
-            <p>Greg cobra por usuário. Recruta Simples cobra por posição — jornadas e extratos <strong class="hi">separados</strong>.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Premissa 02</span>
-            <h3>Assinatura recorrente</h3>
-            <p>Mensal ou anual. O cliente assina um plano — não compra avulso sem recorrência.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Premissa 03</span>
-            <h3>Alteração a qualquer momento</h3>
-            <p>Adicionar ou remover módulos e usuários quando quiser. Aumentos de escopo são <strong class="hi">imediato</strong>.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Premissa 04</span>
-            <h3>Acesso vinculado à assinatura</h3>
-            <p>Só acessa dados dos módulos contratados. Cancelou tarefas? Perde acesso aos dados de tarefas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
+    </section>
 
-  <!-- 05 · PACOTES -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Premissas de Negócio</span>
-        <h2 class="slide-title">Pacotes, não customização infinita.</h2>
-        <p class="lead">Sugerir pacotes básicos e avançados — o cliente altera depois, mas não fica perdido escolhendo módulo por módulo.</p>
+    <!-- OBJETIVO -->
+    <section id="objetivo" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Fundamento</span>
+        <h1>Objetivo</h1>
+        <p class="lead">Garantir a visão self-service da plataforma — todos os módulos da Greg contratáveis e utilizáveis de ponta a ponta pelo cliente.</p>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-3">
-          <div class="card highlight">
-            <span class="card-kicker">Direcionamento</span>
-            <h3>Pacotes com MRR mínimo</h3>
-            <p>Até 10, 20, 30 usuários. Acima disso, negociação comercial. Mínimo contratável — como 2 posições no Recruta.</p>
-          </div>
-          <div class="card inverse">
-            <span class="card-kicker">Premissa</span>
-            <h3>Bundles de módulos</h3>
-            <p>Ex.: contrate Gestão de Desempenho, ganhe Tarefas. Depois o cliente adiciona o que precisar.</p>
-          </div>
-          <div class="card inverse">
-            <span class="card-kicker">Premissa</span>
-            <h3>Onboarding na 1ª compra</h3>
-            <p>How-to por módulo contratado — ajuda imediata para começar a usar a plataforma.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 06 · COMERCIAL -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Premissas de Negócio</span>
-        <h2 class="slide-title">Self-service e comercial convivem.</h2>
+      <div class="callout">
+        <div class="t">Jornada end-to-end</div>
+        <p style="margin:0">Criar o arcabouço de uma jornada completa do usuário: <em>contratação → pagamento → acesso → gestão da assinatura</em> — sem depender de suporte ou financeiro.</p>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-2">
-          <div class="card">
-            <span class="card-kicker">Premissa</span>
-            <h3>Tabelas de preço distintas</h3>
-            <p>Self-service tem preço público. Enterprise exige negociação — senão não há motivo para falar com o time.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Premissa</span>
-            <h3>Canais humanos sempre</h3>
-            <p>"Fale com comercial" e "Fale com suporte" — self-service não substitui quem precisa de segurança.</p>
-          </div>
-        </div>
-        <div class="info-bar">
-          <span class="info-bar-label">PAGAMENTO</span>
-          <span class="info-bar-text">Cartão e Pix obrigatórios · Boleto opcional · Grandes contas negociam contrato, não usam cartão</span>
-        </div>
-      </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 07 · PREMISSAS TÉCNICAS -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Premissas Técnicas</span>
-        <h2 class="slide-title">Gateway primeiro. Plataforma no centro.</h2>
-      </div>
-      <div class="slide-body">
-        <div class="grid grid-2 fill">
-          <div class="card">
-            <span class="card-kicker">Premissa crítica</span>
-            <h3>Escolha do gateway</h3>
-            <p>Define modelo de assinatura, taxas, pagamentos e o que é tecnicamente possível. Provável candidato: <strong class="hi">Iugu</strong> (já integrado).</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Premissa</span>
-            <h3>Gestão dentro da plataforma</h3>
-            <p>CS não entra no gateway para criar planos ou assinaturas. Tudo via backoffice + APIs.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Premissa</span>
-            <h3>Nota fiscal automática</h3>
-            <p>Geração integrada e download de NF pelo cliente — sem abrir chamado.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Premissa</span>
-            <h3>Gateway faz o pesado</h3>
-            <p>Faturas, e-mails de cobrança, bloqueio e desbloqueio — sem job próprio de geração de fatura.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
+      <h2>O que o módulo precisa viabilizar</h2>
+      <ul class="check">
+        <li>Todos os módulos da Greg em modelo self-service</li>
+        <li>Menos passos com time de suporte e financeiro</li>
+        <li>Incremento de faturamento, usuários e coleta de dados</li>
+        <li>Coerência com a promessa de plataforma self-service</li>
+      </ul>
+    </section>
 
-  <!-- 08 · TRÊS CAMADAS -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Arquitetura do Módulo</span>
-        <h2 class="slide-title">Três camadas separadas.</h2>
-        <p class="lead">Cada camada com premissas e escopo próprios — produto, operação interna e integração de pagamento.</p>
+    <!-- REASON TO BELIEVE -->
+    <section id="rtb" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Fundamento</span>
+        <h1>Reason to Believe</h1>
+        <p class="lead">Menos fricção na contratação tende a incrementar faturamento, usuários, dados e performance interna — porque a jornada fica mais fácil para o cliente.</p>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-3">
-          <div class="card accent-top">
-            <span class="card-kicker">Camada 01</span>
-            <h3>Módulo de Billing</h3>
-            <p>O que o cliente vê: contratar, pagar, alterar plano, baixar NF.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Camada 02</span>
-            <h3>Gerenciamento</h3>
-            <p>O que o CS e backoffice usam: planos, assinaturas, relatórios, upsell.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Camada 03</span>
-            <h3>Gateway</h3>
-            <p>Iugu (ou similar): assinaturas, cobrança, conciliação, faturas automáticas.</p>
-          </div>
-        </div>
-        <div class="callout">
-          <div class="t">Esqueleto do gateway</div>
-          <p>As telas seguem o <em>esqueleto do gateway</em> — mas a operação diária acontece na nossa plataforma.</p>
-        </div>
-      </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 09 · PRODUTO -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Camada 01 · Produto</span>
-        <h2 class="slide-title">Módulo de Billing — cliente.</h2>
-      </div>
-      <div class="slide-body">
-        <div class="tag-row">
-          <span class="tag">Escolher pacote ou plano</span>
-          <span class="tag">Contratar módulos</span>
-          <span class="tag">Pagar (cartão / Pix)</span>
-          <span class="tag">Alterar assinatura</span>
-          <span class="tag">Baixar nota fiscal</span>
-          <span class="tag">How-to por módulo</span>
-          <span class="tag">Falar com comercial</span>
-          <span class="tag">Falar com suporte</span>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Para o cliente</h3>
+          <p>Contratação em minutos — não semanas. Setup, onboarding e uso imediatos.</p>
         </div>
-        <div class="compare-card">
-          <span class="card-kicker">Experiência alvo</span>
-          <p>Cliente entra, seleciona pacote, paga na hora, faz onboarding e começa a usar — em minutos.</p>
+        <div class="card">
+          <h3>Para a BeCulture</h3>
+          <p>Crescimento escalável: mais faturamento e usuários sem escalar operação manual.</p>
+        </div>
+        <div class="card">
+          <h3>Para operação</h3>
+          <p>Menos dependência de suporte e financeiro para cada nova contratação.</p>
+        </div>
+        <div class="card">
+          <h3>Para o produto</h3>
+          <p>Billing alinhado à promessa de uma plataforma verdadeiramente self-service.</p>
         </div>
       </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
+    </section>
 
-  <!-- 10 · GERENCIAMENTO -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Camada 02 · Gerenciamento</span>
-        <h2 class="slide-title">Backoffice e CS.</h2>
+    <!-- CHECKLIST -->
+    <section id="checklist" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Validação</span>
+        <h1>Checklist de decisões</h1>
+        <p class="lead">Pontos levantados na reunião estratégica de 12/06. Marque conforme o time valida — o progresso persiste no navegador.</p>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-2">
-          <div class="card">
-            <span class="card-kicker">Premissa</span>
-            <h3>Criar planos via plataforma</h3>
-            <p>Planos e alterações sincronizados com o gateway por API — sem entrar no painel do Iugu.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Premissa</span>
-            <h3>Gestão de assinaturas</h3>
-            <p>Ativar, desativar, consultar status e usuários ativos — tudo no módulo interno.</p>
-          </div>
-        </div>
-        <div class="callout">
-          <div class="t">Nice to have</div>
-          <p>Dashboard de faturamento previsto, usuários ativos por módulo, sinais de upsell (clicou em planos 2× sem contratar, tentou aumentar usuários).</p>
-        </div>
-      </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 11 · GATEWAY -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Camada 03 · Gateway</span>
-        <h2 class="slide-title">Iugu como espinha dorsal.</h2>
-        <p class="lead">Avaliar 1–3 gateways, mas priorizar o que o time já domina. Economia de 5% na taxa não compensa meses reaprendendo integração.</p>
+      <h2>Premissas de negócio</h2>
+      <table class="checklist-table">
+        <thead>
+          <tr><th></th><th>Ponto</th><th>Status</th><th>Detalhe</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" data-id="p01"></td>
+            <td><b>Cobrança por usuário ativo</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Greg cobra por usuário. Recruta cobra por posição.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p02"></td>
+            <td><b>Jornadas Greg / Recruta separadas</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Extratos e contratação separados — não misturar valores.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p03"></td>
+            <td><b>Assinatura recorrente</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Mensal ou anual. Cliente assina um plano, não compra avulso.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p04"></td>
+            <td><b>Alteração a qualquer momento</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Adicionar/remover módulos e usuários. Aumentos imediatos.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p05"></td>
+            <td><b>Acesso vinculado à assinatura</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Cancelou módulo → perde acesso aos dados daquele módulo.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p06"></td>
+            <td><b>Pacotes com MRR mínimo</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Até 10/20/30 usuários. Mínimo contratável (ex.: 2 posições no Recruta).</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p07"></td>
+            <td><b>Pacote fixo vs quantidade livre</b></td>
+            <td><span class="pill status-duvida">Dúvida</span></td>
+            <td>Tendência: pacotes. Validar com benchmarks de mercado.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p08"></td>
+            <td><b>Bundles de módulos</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Ex.: contrate Desempenho, ganhe Tarefas. Cliente adiciona depois.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p09"></td>
+            <td><b>Onboarding na 1ª compra</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>How-to por módulo contratado na primeira utilização.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p10"></td>
+            <td><b>Tabelas de preço distintas</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Self-service público vs Enterprise com negociação comercial.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p11"></td>
+            <td><b>Canais humanos sempre</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>"Fale com comercial" e "Fale com suporte" — self-service não substitui tudo.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p12"></td>
+            <td><b>Pagamento cartão + Pix</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Obrigatórios. Boleto opcional. Grandes contas negociam contrato.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="p13"></td>
+            <td><b>Freemium / teste grátis</b></td>
+            <td><span class="pill status-duvida">Dúvida</span></td>
+            <td>Ainda não definido. Muda formato de pagamento e onboarding.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Premissas técnicas</h2>
+      <table class="checklist-table">
+        <thead>
+          <tr><th></th><th>Ponto</th><th>Status</th><th>Detalhe</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" data-id="t01"></td>
+            <td><b>Escolha do gateway</b></td>
+            <td><span class="pill status-duvida">Dúvida</span></td>
+            <td>Provável Iugu (ainda não integrado; time já conhece e tem know-how). Comparar 1–3 opções de taxa.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="t02"></td>
+            <td><b>Gateway define o que é possível</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Escolher gateway antes de desenhar assinaturas — restrição crítica.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="t03"></td>
+            <td><b>Gestão dentro da plataforma</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>CS não entra no painel do gateway. Tudo via backoffice + APIs.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="t04"></td>
+            <td><b>Nota fiscal automática</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Geração integrada + download pelo cliente — sem chamado.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="t05"></td>
+            <td><b>Sem job de fatura próprio</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>Gateway gera faturas, e-mails, bloqueio/desbloqueio.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="t06"></td>
+            <td><b>Planos criados via backoffice</b></td>
+            <td><span class="pill status-definido">Definido</span></td>
+            <td>APIs do gateway para criar planos, ativar/desativar assinaturas.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="t07"></td>
+            <td><b>Cálculo usuários ativos (V0)</b></td>
+            <td><span class="pill status-pendente">Em andamento</span></td>
+            <td>Backoffice atual já calcula usuários ativos no mês — base para billing.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Entregas por versão</h2>
+      <table class="checklist-table">
+        <thead>
+          <tr><th></th><th>Entrega</th><th>Versão</th><th>Escopo</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" data-id="v01"></td>
+            <td><b>Escolha e integração do gateway</b></td>
+            <td><span class="pill status-pendente">V1</span></td>
+            <td>Fundacional — define todo o resto.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="v02"></td>
+            <td><b>Assinatura básica + pagamento</b></td>
+            <td><span class="pill status-pendente">V1</span></td>
+            <td>Cartão/Pix, NF para download.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="v03"></td>
+            <td><b>Pacotes no site (self-service)</b></td>
+            <td><span class="pill status-pendente">V2</span></td>
+            <td>Contratação e alteração pelo cliente.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="v04"></td>
+            <td><b>Separação Greg / Recruta</b></td>
+            <td><span class="pill status-pendente">V2</span></td>
+            <td>Jornadas e extratos independentes.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="v05"></td>
+            <td><b>Backoffice de planos via API</b></td>
+            <td><span class="pill status-pendente">V3</span></td>
+            <td>CS gerencia sem entrar no Iugu.</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" data-id="v06"></td>
+            <td><b>Dashboard CS + upsell</b></td>
+            <td><span class="pill status-nice">V3</span></td>
+            <td>MRR previsto, sinais de intenção de compra.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PREMISSAS NEGÓCIO -->
+    <section id="premissas-negocio" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Premissas</span>
+        <h1>Negócio</h1>
+        <p class="lead">Regras de cobrança, pacotes e relação entre self-service e comercial — o que o cliente vê e como contrata.</p>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-3">
-          <div class="card">
-            <span class="card-kicker">Faz</span>
-            <h3>Assinaturas e cobrança</h3>
-            <p>Recorrência, faturas, e-mails, bloqueio por inadimplência.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Faz</span>
-            <h3>Pagamentos</h3>
-            <p>Cartão, Pix, conciliação automática.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Restringe</span>
-            <h3>Modelo possível</h3>
-            <p>O que desenhamos precisa caber no que o gateway permite fazer.</p>
-          </div>
+
+      <h2>Modelo de cobrança e assinatura</h2>
+      <div class="grid grid-2">
+        <div class="card"><span class="card-kicker">Premissa 01</span><h3>Cobrança por usuário ativo</h3><p>Greg cobra por usuário. Recruta Simples cobra por posição — jornadas e extratos <strong class="hi">separados</strong>.</p></div>
+        <div class="card"><span class="card-kicker">Premissa 02</span><h3>Assinatura recorrente</h3><p>Mensal ou anual. O cliente assina um plano — não compra avulso sem recorrência.</p></div>
+        <div class="card"><span class="card-kicker">Premissa 03</span><h3>Alteração a qualquer momento</h3><p>Adicionar ou remover módulos e usuários quando quiser. Aumentos de escopo são <strong class="hi">imediato</strong>.</p></div>
+        <div class="card"><span class="card-kicker">Premissa 04</span><h3>Acesso vinculado à assinatura</h3><p>Só acessa dados dos módulos contratados. Cancelou tarefas? Perde acesso aos dados de tarefas.</p></div>
+      </div>
+
+      <h2>Pacotes, não customização infinita</h2>
+      <p>Sugerir pacotes básicos e avançados — o cliente altera depois, mas não fica perdido escolhendo módulo por módulo.</p>
+      <div class="grid grid-3">
+        <div class="card highlight">
+          <span class="card-kicker">Direcionamento</span>
+          <h3>Pacotes com MRR mínimo</h3>
+          <p>Até 10, 20, 30 usuários. Acima disso, negociação comercial. Mínimo contratável — como 2 posições no Recruta.</p>
+        </div>
+        <div class="card inverse">
+          <span class="card-kicker">Premissa</span>
+          <h3>Bundles de módulos</h3>
+          <p>Ex.: contrate Gestão de Desempenho, ganhe Tarefas. Depois o cliente adiciona o que precisar.</p>
+        </div>
+        <div class="card inverse">
+          <span class="card-kicker">Premissa</span>
+          <h3>Onboarding na 1ª compra</h3>
+          <p>How-to por módulo contratado — ajuda imediata para começar a usar a plataforma.</p>
         </div>
       </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 12 · NICE TO HAVE -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Nice to Have</span>
-        <h2 class="slide-title">Incrementos após o núcleo.</h2>
+      <h2>Self-service e comercial convivem</h2>
+      <div class="grid grid-2">
+        <div class="card"><span class="card-kicker">Premissa</span><h3>Tabelas de preço distintas</h3><p>Self-service tem preço público. Enterprise exige negociação — senão não há motivo para falar com o time.</p></div>
+        <div class="card"><span class="card-kicker">Premissa</span><h3>Canais humanos sempre</h3><p>"Fale com comercial" e "Fale com suporte" — self-service não substitui quem precisa de segurança.</p></div>
       </div>
-      <div class="slide-body">
-        <div class="deliverables">
-          <div class="card"><span class="dlv-num">01</span><h3>Chat de IA para planos</h3><p>Tira dúvidas, sugere pacote ou encaminha para comercial.</p></div>
-          <div class="card"><span class="dlv-num">02</span><h3>NF por conversa</h3><p>"Me manda a nota de março" — agente busca e entrega.</p></div>
-          <div class="card"><span class="dlv-num">03</span><h3>Dashboard financeiro</h3><p>MRR previsto, assinaturas ativas, usuários por módulo.</p></div>
-          <div class="card"><span class="dlv-num">04</span><h3>Motor de upsell</h3><p>Alertas quando cliente demonstra intenção sem fechar.</p></div>
-          <div class="card"><span class="dlv-num">05</span><h3>Relatórios de uso</h3><p>Mudanças de clientes que impactam faturamento.</p></div>
-          <div class="card"><span class="dlv-num">06</span><h3>IA operacional</h3><p>Billing é processual — IA é complemento, não premissa.</p></div>
+      <div class="info-bar">
+        <span class="info-bar-label">PAGAMENTO</span>
+        <span class="info-bar-text">Cartão e Pix obrigatórios · Boleto opcional · Grandes contas negociam contrato, não usam cartão</span>
+      </div>
+    </section>
+
+    <!-- PREMISSAS TÉCNICAS -->
+    <section id="premissas-tecnicas" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Premissas</span>
+        <h1>Técnicas</h1>
+        <p class="lead">Gateway primeiro. Plataforma no centro. O que é possível tecnicamente depende do broker de pagamento escolhido.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card accent-top">
+          <span class="card-kicker">Premissa crítica</span>
+          <h3>Escolha do gateway</h3>
+          <p>Define modelo de assinatura, taxas, pagamentos e o que é tecnicamente possível. Provável candidato: <strong class="hi">Iugu</strong> — ainda não integrado, mas o time já conhece a plataforma e tem know-how do funcionamento.</p>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Premissa</span>
+          <h3>Gestão dentro da plataforma</h3>
+          <p>CS não entra no gateway para criar planos ou assinaturas. Tudo via backoffice + APIs.</p>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Premissa</span>
+          <h3>Nota fiscal automática</h3>
+          <p>Geração integrada e download de NF pelo cliente — sem abrir chamado.</p>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Premissa</span>
+          <h3>Gateway faz o pesado</h3>
+          <p>Faturas, e-mails de cobrança, bloqueio e desbloqueio — sem job próprio de geração de fatura.</p>
         </div>
       </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 13 · DÚVIDAS -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
-        <span class="eyebrow">Em Aberto</span>
-        <h2 class="slide-title">Dúvidas a validar.</h2>
+      <div class="callout">
+        <div class="t">Por que o gateway vem primeiro</div>
+        <p style="margin:0">Não adianta desenhar assinaturas que o gateway não suporta. A escolha restringe modelo, taxas e fluxo. Economia de 5% na taxa não compensa meses reaprendendo do zero — o time já tem know-how do Iugu, embora a integração ainda precise ser feita.</p>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-2 fill">
-          <div class="card accent-left">
-            <span class="dec-num">DÚVIDA 01</span>
-            <div class="dec-title">Pacote fixo ou quantidade livre?</div>
-            <p class="dec-body">Tendência: pacotes (até 10, 20, 30 usuários). Validar com benchmarks de mercado.</p>
-          </div>
-          <div class="card accent-left">
-            <span class="dec-num">DÚVIDA 02</span>
-            <div class="dec-title">Freemium ou teste grátis?</div>
-            <p class="dec-body">Ainda não definido. Se tiver trial, muda formato de pagamento e onboarding.</p>
-          </div>
-          <div class="card accent-left">
-            <span class="dec-num">DÚVIDA 03</span>
-            <div class="dec-title">Pix e boleto mensais?</div>
-            <p class="dec-body">Pix mensal fechado pode funcionar; boleto recorrente é mais difícil de operar.</p>
-          </div>
-          <div class="card accent-left">
-            <span class="dec-num">DÚVIDA 04</span>
-            <div class="dec-title">Gateway definitivo</div>
-            <p class="dec-body">Comparar taxas de 1–3 opções, mas peso forte para Iugu pela curva já vencida.</p>
-          </div>
+    </section>
+
+    <!-- TRÊS CAMADAS -->
+    <section id="camadas" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Arquitetura</span>
+        <h1>Três camadas separadas</h1>
+        <p class="lead">Produto (cliente), gerenciamento (CS/backoffice) e gateway (Iugu) — cada um com premissas e escopo próprios.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card accent-top">
+          <span class="card-kicker">Camada 01</span>
+          <h3>Módulo de Billing</h3>
+          <p>O que o cliente vê: contratar, pagar, alterar plano, baixar NF.</p>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Camada 02</span>
+          <h3>Gerenciamento</h3>
+          <p>O que o CS e backoffice usam: planos, assinaturas, relatórios, upsell.</p>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Camada 03</span>
+          <h3>Gateway</h3>
+          <p>Iugu: assinaturas, cobrança, conciliação, faturas automáticas.</p>
         </div>
       </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 14 · VERSÕES -->
-  <section class="slide">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
-      <div class="page-head compact">
+      <div class="callout">
+        <div class="t">Esqueleto do gateway</div>
+        <p style="margin:0">As telas seguem o <em>esqueleto do gateway</em> — mas a operação diária acontece na nossa plataforma, não no painel do Iugu.</p>
+      </div>
+    </section>
+
+    <!-- PRODUTO -->
+    <section id="produto" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Camada 01</span>
+        <h1>Módulo de Billing — cliente</h1>
+        <p class="lead">Experiência self-service: cliente entra, seleciona pacote, paga na hora, faz onboarding e começa a usar — em minutos.</p>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">Escolher pacote ou plano</span>
+        <span class="tag">Contratar módulos</span>
+        <span class="tag">Pagar (cartão / Pix)</span>
+        <span class="tag">Alterar assinatura</span>
+        <span class="tag">Baixar nota fiscal</span>
+        <span class="tag">How-to por módulo</span>
+        <span class="tag">Falar com comercial</span>
+        <span class="tag">Falar com suporte</span>
+      </div>
+
+      <h2>Estados que o fluxo precisa cobrir</h2>
+      <div class="grid grid-3">
+        <div class="card"><h3>1 · Vazio</h3><p>Sem plano. Mostrar pacotes e valor de cada um.</p></div>
+        <div class="card"><h3>2 · Contratação</h3><p>Seleção de pacote, pagamento, confirmação.</p></div>
+        <div class="card"><h3>3 · Ativo</h3><p>Gestão de assinatura, upgrade, download de NF.</p></div>
+        <div class="card"><h3>4 · Inadimplência</h3><p>Bloqueio parcial, aviso, retomada de pagamento.</p></div>
+        <div class="card"><h3>5 · Cancelamento</h3><p>Perda de acesso aos dados do módulo cancelado.</p></div>
+      </div>
+    </section>
+
+    <!-- GERENCIAMENTO -->
+    <section id="gerenciamento" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Camada 02</span>
+        <h1>Backoffice e CS</h1>
+        <p class="lead">Time interno gerencia assinaturas, planos e relatórios sem entrar no painel do gateway.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card"><span class="card-kicker">Premissa</span><h3>Criar planos via plataforma</h3><p>Planos e alterações sincronizados com o gateway por API — sem entrar no painel do Iugu.</p></div>
+        <div class="card"><span class="card-kicker">Premissa</span><h3>Gestão de assinaturas</h3><p>Ativar, desativar, consultar status e usuários ativos — tudo no módulo interno.</p></div>
+      </div>
+
+      <h2>Nice to have — gestão</h2>
+      <ul class="check">
+        <li>Dashboard de faturamento previsto (MRR)</li>
+        <li>Usuários ativos por módulo</li>
+        <li>Sinais de upsell: clicou em planos 2× sem contratar</li>
+        <li>Alerta quando cliente tentou aumentar usuários sem fechar</li>
+      </ul>
+    </section>
+
+    <!-- GATEWAY -->
+    <section id="gateway" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Camada 03</span>
+        <h1>Iugu como espinha dorsal</h1>
+        <p class="lead">Avaliar 1–3 gateways, mas priorizar o que o time já domina. APIs boas; SDK menos ideal — integração direta via API.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card"><span class="card-kicker">Faz</span><h3>Assinaturas e cobrança</h3><p>Recorrência, faturas, e-mails, bloqueio por inadimplência.</p></div>
+        <div class="card"><span class="card-kicker">Faz</span><h3>Pagamentos</h3><p>Cartão, Pix, conciliação automática.</p></div>
+        <div class="card"><span class="card-kicker">Restringe</span><h3>Modelo possível</h3><p>O que desenhamos precisa caber no que o gateway permite fazer.</p></div>
+      </div>
+
+      <table>
+        <thead><tr><th>Critério</th><th>Iugu (provável)</th><th>Alternativa</th></tr></thead>
+        <tbody>
+          <tr><td><b>Know-how interno</b></td><td>Sim — time conhece o funcionamento</td><td>Curva de aprendizagem do zero</td></tr>
+          <tr><td><b>Taxas</b></td><td>Dentro do mercado</td><td>Pode ser ~5% menor</td></tr>
+          <tr><td><b>APIs</b></td><td>Boas</td><td>Variável</td></tr>
+          <tr><td><b>SDK</b></td><td>Fraco — usar API direta</td><td>—</td></tr>
+          <tr><td><b>Decisão</b></td><td colspan="2">Só migrar se economia compensar meses de reintegração</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- NICE TO HAVE -->
+    <section id="nice-to-have" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Incrementos</span>
+        <h1>Nice to have</h1>
+        <p class="lead">Billing é operacional e processual — IA é complemento, não premissa. Entregas após o núcleo estar sólido.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card"><h3>01 · Chat de IA para planos</h3><p>Tira dúvidas, sugere pacote ou encaminha para comercial.</p></div>
+        <div class="card"><h3>02 · NF por conversa</h3><p>"Me manda a nota de março" — agente busca e entrega.</p></div>
+        <div class="card"><h3>03 · Dashboard financeiro</h3><p>MRR previsto, assinaturas ativas, usuários por módulo.</p></div>
+        <div class="card"><h3>04 · Motor de upsell</h3><p>Alertas quando cliente demonstra intenção sem fechar.</p></div>
+        <div class="card"><h3>05 · Relatórios de uso</h3><p>Mudanças de clientes que impactam faturamento.</p></div>
+        <div class="card"><h3>06 · IA operacional</h3><p>Complemento — módulo funciona sem IA.</p></div>
+      </div>
+    </section>
+
+    <!-- DÚVIDAS -->
+    <section id="duvidas" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Em aberto</span>
+        <h1>Dúvidas a validar</h1>
+        <p class="lead">Pontos que precisam de decisão antes de fechar escopo ou implementar.</p>
+      </div>
+
+      <table>
+        <thead><tr><th>#</th><th>Dúvida</th><th>Contexto</th><th>Próximo passo</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>01</b></td>
+            <td>Pacote fixo ou quantidade livre?</td>
+            <td>Tendência: pacotes (até 10, 20, 30 usuários).</td>
+            <td>Benchmark com plataformas similares</td>
+          </tr>
+          <tr>
+            <td><b>02</b></td>
+            <td>Freemium ou teste grátis?</td>
+            <td>Muda formato de pagamento e onboarding.</td>
+            <td>Decisão de produto com Renato</td>
+          </tr>
+          <tr>
+            <td><b>03</b></td>
+            <td>Pix e boleto mensais?</td>
+            <td>Pix mensal fechado pode funcionar; boleto recorrente é difícil.</td>
+            <td>Validar com Iugu o que suporta</td>
+          </tr>
+          <tr>
+            <td><b>04</b></td>
+            <td>Gateway definitivo</td>
+            <td>Iugu provável (know-how interno); comparar taxas de 1–3 opções.</td>
+            <td>Workshop técnico + análise de custo</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- VERSÕES -->
+    <section id="versoes" class="section-block">
+      <div class="page-head">
         <span class="eyebrow">Roadmap</span>
-        <h2 class="slide-title">Versões propostas.</h2>
+        <h1>Versões propostas</h1>
         <p class="lead">Nem tudo de uma vez. Premissas encaixadas em entregas incrementais — visual novo em todas.</p>
       </div>
-      <div class="slide-body">
-        <div class="grid grid-3">
-          <div class="card stage-card active-stage">
-            <span class="stage-kicker">VERSÃO 1</span>
-            <div class="stage-title">Fundação</div>
-            <p class="stage-body">Escolha do gateway · Cálculo de usuários ativos · Assinatura básica · Pagamento cartão/Pix · NF para download</p>
-          </div>
-          <div class="card stage-card mid-stage">
-            <span class="stage-kicker">VERSÃO 2</span>
-            <div class="stage-title">Self-service completo</div>
-            <p class="stage-body">Pacotes no site · Contratação e alteração pelo cliente · Separação Greg/Recruta · How-to por módulo</p>
-          </div>
-          <div class="card stage-card late-stage">
-            <span class="stage-kicker">VERSÃO 3</span>
-            <div class="stage-title">Gestão e inteligência</div>
-            <p class="stage-body">Backoffice de planos via API · Dashboard CS · Upsell · Chat de planos (nice to have)</p>
-          </div>
+
+      <div class="grid grid-3">
+        <div class="card accent-top version-card">
+          <span class="stage-kicker">VERSÃO 1 · Fundação</span>
+          <h3>Gateway + assinatura básica</h3>
+          <p>Escolha do gateway · Cálculo de usuários ativos · Assinatura básica · Pagamento cartão/Pix · NF para download</p>
         </div>
-        <div class="mono-row">
-          <span class="mono-item">V0 em grooming — escopo mínimo viável</span>
-          <span class="mono-item">Job de fatura descartado — gateway resolve</span>
+        <div class="card version-card">
+          <span class="stage-kicker">VERSÃO 2 · Self-service</span>
+          <h3>Contratação pelo cliente</h3>
+          <p>Pacotes no site · Contratação e alteração pelo cliente · Separação Greg/Recruta · How-to por módulo</p>
+        </div>
+        <div class="card version-card">
+          <span class="stage-kicker">VERSÃO 3 · Inteligência</span>
+          <h3>Gestão e upsell</h3>
+          <p>Backoffice de planos via API · Dashboard CS · Upsell · Chat de planos (nice to have)</p>
         </div>
       </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
-  <!-- 15 · ENCERRAMENTO -->
-  <section class="slide slide-cover">
-    <div class="slide-content">
-      <div class="slide-top"><div class="brand-inline"><span class="dot">◆</span> Kit de Produto · BeCulture</div></div>
+      <div class="info-bar">
+        <span class="info-bar-label">V0</span>
+        <span class="info-bar-text">Em grooming com Franco — escopo mínimo viável · Job de fatura descartado (gateway resolve)</span>
+      </div>
+    </section>
+
+    <!-- PRÓXIMOS PASSOS -->
+    <section id="proximos-passos" class="section-block">
       <div class="page-head">
-        <h2 class="closing-title">Billing que viabiliza a plataforma <em>self-service.</em></h2>
-        <div class="gap-sm"></div>
-        <p class="closing-sub">Premissas definidas. Próximo passo: encaixar nas versões.</p>
-        <div class="flex-1"></div>
-        <p class="closing-footer">beculture · Módulo de Billing · Reunião Estratégica · 12 Jun 2026</p>
+        <span class="eyebrow">Avançar</span>
+        <h1>Próximos passos</h1>
+        <p class="lead">O que fazer agora para destravar o projeto.</p>
       </div>
-    </div>
-    <span class="page-num"></span>
-  </section>
 
+      <div class="grid grid-2">
+        <div class="card accent-left">
+          <h3><span class="pill do">Imediato</span></h3>
+          <ul class="check">
+            <li>Workshop gateway: validar Iugu vs alternativas</li>
+            <li>Fechar dúvidas de pacotes e freemium com Renato</li>
+            <li>Continuar V0 backoffice (usuários ativos)</li>
+            <li>Grooming V0 com Franco — escopo mínimo</li>
+          </ul>
+        </div>
+        <div class="card accent-left">
+          <h3><span class="pill status-pendente">Curto prazo</span></h3>
+          <ul class="check">
+            <li>Encaixar premissas na V1, V2, V3</li>
+            <li>Desenhar fluxo self-service no visual novo</li>
+            <li>Definir tabela de preços públicos vs enterprise</li>
+            <li>Integração Iugu — planos e assinaturas via API</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="t">Billing que viabiliza a plataforma self-service</div>
+        <p style="margin:0">Premissas definidas na reunião de 12/06. Próximo passo: validar checklist, fechar dúvidas e executar V1 com profundidade.</p>
+      </div>
+
+      <div class="foot">
+        <span>beculture · Módulo de Billing · Jun 2026</span>
+        <span><a href="#visao">↑ Voltar ao topo</a></span>
+      </div>
+    </section>
+
+  </main>
 </div>
 
-<script>
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const dotsEl = document.getElementById('dots');
-  let cur = 0;
-  let busy = false;
-
-  function updatePageNums() {
-    slides.forEach((slide, i) => {
-      const el = slide.querySelector('.page-num');
-      if (el) el.textContent = (i + 1) + ' · ' + slides.length;
-    });
-  }
-
-  // Build dots
-  updatePageNums();
-
-  slides.forEach((_, i) => {
-    const d = document.createElement('button');
-    d.className = 'dot' + (i === 0 ? ' active' : '');
-    d.setAttribute('aria-label', 'Slide ' + (i + 1));
-    d.onclick = () => goTo(i);
-    dotsEl.appendChild(d);
-  });
-
-  function goTo(next) {
-    if (busy || next === cur || next < 0 || next >= slides.length) return;
-    busy = true;
-
-    const dir = next > cur ? 1 : -1;
-    const from = slides[cur];
-    const to   = slides[next];
-
-    // Prepare incoming slide off-screen (no transition)
-    to.style.transition = 'none';
-    to.style.opacity = '0';
-    to.style.transform = `translateX(${dir * 60}px)`;
-    to.classList.remove('active', 'exit-left', 'exit-right');
-
-    // Force reflow so transition fires
-    to.offsetHeight;
-    to.style.transition = '';
-
-    // Animate out
-    from.classList.add(dir > 0 ? 'exit-left' : 'exit-right');
-    from.classList.remove('active');
-
-    // Animate in
-    to.style.opacity = '';
-    to.style.transform = '';
-    to.classList.add('active');
-
-    // Update dots
-    dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === next));
-
-    cur = next;
-    setTimeout(() => {
-      from.classList.remove('exit-left', 'exit-right');
-      busy = false;
-    }, 480);
-  }
-
-  function go(dir) { goTo(cur + dir); }
-
-  // Keyboard
-  document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ')  { e.preventDefault(); go(1);  }
-    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                     { e.preventDefault(); go(-1); }
-  });
-
-  // Touch swipe
-  let tx = 0;
-  document.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
-  document.addEventListener('touchend',   e => {
-    const dx = e.changedTouches[0].clientX - tx;
-    if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
-  });
-</script>
-
-</body>
-</html>
-
+<script src="assets/billing.js"></script>
 </body>
 </html>

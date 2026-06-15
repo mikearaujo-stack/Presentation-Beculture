@@ -1,0 +1,160 @@
+/* ============================================================
+   Billing Strategy — Site interativo
+   ============================================================ */
+
+.content {
+  max-width: 880px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 48px 64px;
+}
+
+.section-block {
+  scroll-margin-top: 24px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.section-block:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.section-block .page-head {
+  margin-bottom: 24px;
+}
+
+.section-block h2:first-of-type {
+  margin-top: 0;
+}
+
+/* Progresso sidebar */
+.sidebar-progress {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #64748B;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progress-count {
+  font-size: 11px;
+  color: #94A3B8;
+  margin-top: 6px;
+}
+
+/* Status pills */
+.pill.status-definido  { background: #ECFDF5; color: #047857; }
+.pill.status-duvida    { background: #FEF3C7; color: #B45309; }
+.pill.status-nice      { background: #EFF6FF; color: #1D4ED8; }
+.pill.status-pendente  { background: #F1F5F9; color: #64748B; }
+
+/* Checklist interativo */
+.checklist-table td:first-child,
+.checklist-table th:first-child {
+  width: 36px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.checklist-table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-strong);
+  cursor: pointer;
+}
+
+.checklist-table tr.done td:nth-child(2),
+.checklist-table tr.done td:nth-child(4) {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+.checklist-table tr.done .pill {
+  text-decoration: none;
+}
+
+/* Stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.stat-card .num {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent-strong);
+  line-height: 1;
+}
+
+.stat-card .lbl {
+  font-size: 11px;
+  color: var(--text-subtle);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Versão timeline */
+.version-card {
+  position: relative;
+}
+
+.version-card .stage-kicker {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: 6px;
+}
+
+/* Anchor nav smooth */
+html { scroll-behavior: smooth; }
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar {
+    position: relative;
+    height: auto;
+  }
+  .grid-2, .grid-3, .stats-row {
+    grid-template-columns: 1fr;
+  }
+  .content { padding: 24px 20px 48px; }
+}
