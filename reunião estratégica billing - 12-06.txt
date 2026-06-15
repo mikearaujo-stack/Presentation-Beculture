@@ -1,0 +1,287 @@
+0:02 - Unidentified Speaker
+Maravilha!
+
+0:02 - Mike Araujo
+É o meu agente de IA.
+
+0:05 - Renato Teixeira
+Ele vai nos acompanhar agora em várias reuniões. Cara, só para reduzir um pouquinho essa reunião, mas a gente já tinha falado sobre ela, né cara? Já tinha tido muita coisa. O que a gente ia falar aqui é meio que fazer uma versão mais estratégica, né? Sim. Mandala ali, né? Você já tinha conseguido colocar aqueles pontos. O que a gente pode fazer, a gente pode colocando aqui, falando um pouquinho para aí, ah, depois eu pego a transcrição, e aí notes Renato e Renato. O que é isso aqui? Renato e Renato. Tá bom. É para depois a gente colocar no... Você e fazer uma apresentaçãozinha estratégica do que a gente quer fazer com o modo de Billing. Mas vamos falando aqui, acho que o melhor é ir falando. Cadê aquela questão das versões? Você consegue pegar aí aquelas versões que a gente colocou na outra reunião?
+
+1:26 - Unidentified Speaker
+Tá.
+
+1:27 - Unidentified Speaker
+Quer que eu compartilhe a tela?
+
+1:32 - Mike Araujo
+Quer que eu mande uma mensagem lá no...
+
+1:38 - Unidentified Speaker
+É, pode mandar, manda aqui.
+
+1:42 - Mike Araujo
+Deixa eu ver se vai ser... Essa aqui foi a B0 que a gente conversou uns dias atrás. E tem a... E a que o Franco escreveu.
+
+2:14 - Renato Teixeira
+Legendas pela comunidade Amara.org Animal. Vamos falar um pouquinho então. Depois eu vou te dar acesso à transcrição, Mike, aí se você puder depois gerar o material eu te mostro como é que eu tô gerando pra gente fazer fazer o materialzinho bonito ali com o cursor e eu até te ensino aqui. Enfim, tô tentando fazer, não gostei muito. Tava fazendo no Cloud, cara, não gostei, não tava melhor que o cursor. E agora eu tô usando o cursor para fazer a apresentação que eu tenho que fazer para segunda-feira Enfim, vamos lá, cara. Eu acho que o objetivo principal aqui, o objetivo principal desse módulo de Billing é garantir a visão da nossa plataforma. A nossa plataforma é uma plataforma self-service. Então, o principal ponto aqui é criar... O objetivo principal, de novo, a estratégia é fazer o módulo self-service, manter a plataforma no estilo self-service, E a razão para acreditar no Reason to Believe desse negócio é porque a gente entende que diminuir a fricção com o cliente, diminuir, fazer a jornada mais fácil para o cara fazer a contratação tende a incrementar tanto a parte de faturamento, usuários, coleta de dados, também performance interna. A gente precisa de menos passos ou de menos coisas sendo feita com time de suporte financeiro, etc., porque a gente vai criar ali um arcabouço que é uma jornada de end-to-end do usuário para a utilização. Então, o grande objetivo é fazer com que todos os módulos da Greg sejam self-service. Para isso, a gente tem algumas premissas. A gente tem premissas técnicas e premissas de negócio. E eu acho que as premissas de negócio ali tem muitas, né? Mas a primeira coisa que a gente precisa ter é saber como esses caras vão ser cobrados, né? Como é a forma de cobrança. Essa é uma primeira premissa, tem que ter saber como a forma de cobrança, se é por usuário, etc. A gente já tem hoje o módulo, a gente sabe que é por usuário, mas essa é uma premissa, tem que existir isso. Uma outra questão é que a gente tem que separar bem o módulo de cobrança da Greg e do Recruta, de contratação dos demais módulos. Por quê? Porque a gente está indo para um caminho de cobrança por usuário que, no final do dia, não é a mesma forma de cobrança do Recruta Simples. O Recruta Simples, ele é por posição. Então, isso, eu acho que ainda precisa de um pouco mais de pensamento desenvolvimento e como vai ser implementado, sabem? Como é que isso vai ser feito? Eu não acho que é interessante uma jornada única de contratação misturando os valores, eu acho que isso tem que tá, é, isso tem que tá separado de alguma forma, né, porque senão fica muito confuso para o usuário, né, entender...
+
+5:51 - Unidentified Speaker
+Que negócio é esse, né?
+
+5:52 - Renato Teixeira
+Então tem que ter, acho que, um extrato ali de uma maneira separada, eu acho que isso também é uma premissa que a gente tem na hora que a gente fala desse módulo de Billing. Ok? Ok. Então, acho que esse é outro ponto. Um terceiro ponto aí de gestão de usuário, né, é que, na parte de usuário e usabilidade, é que a gente quer o seguinte, né, que os usuários façam através de uma assinatura mensal. Isso é muito importante, porque se a gente faz por outra maneira, como é que a gente faz a cobrança, né? Eu acho que a cobrança o ideal é por assinatura, você assina, assina um mês, você pode assinar um ano, né? Você pode assinar tanto por mês quanto por um ano, mas tem assinatura, né? Então, acho que esse é um... Opa, tá ouvindo? Voltou? Então, por assinatura. Outra coisa que tem que ter é que as pessoas vão poder alterar a assinatura no momento que elas quiserem, né? Então, se eu quero adicionar serviço, se eu quero diminuir serviço, eu posso fazer a hora que eu quiser, né? E eu só vou ter acesso aos dados nos módulos que eu tenho assinado. Então, se eu contratei tarefas e desassinei tarefas, eu não tenho mais acesso aos dados de tarefas. Se eu contratei projeto, descontratei projeto, não tenho mais acesso ao módulo. Então, que é um outro ponto importante ali. O que mais a gente fala de premissas aqui que é importante? Então, eu posso contratar módulos separados, né? Eu vou ter acesso a esses módulos. Usuários, né? Se, poxa, se caso eu quero contratar, se eu quiser aumentar qualquer coisa no escopo, tanto usuário quanto módulos, eu posso fazer isso a qualquer tempo. E o aumento tem que ser imediato, né? Então, Agora que eu aumentar o valor do módulo, se eu quiser aumentar, perdão, desculpa, eu quero mais o módulo, eu posso liberar na hora. Se eu quiser aumentar usuários, eu posso aumentar na hora, eu não tenho que ficar me preocupando com isso.
+
+8:07 - Mike Araujo
+E aqui eu tenho uma dúvida, tá, Renato? Pensando nessa questão self-service e automatizar todo esse processo, quando a gente fala da contratação de mais usuários em determinado plano ou qualquer coisa que seja definido, A gente tá falando de tipo, eu estou num plano aonde eu tenho 50 usuários, onde eu posso colocar até 50 usuários, vou contratar um de até 150, por exemplo, ou eu vou poder contratar uma quantidade específica caso eu queira?
+
+8:33 - Mike Araujo
+Eu acho que é um excelente ponto, cara.
+
+8:36 - Renato Teixeira
+Eu acho que a gente tem que sair com uma dúvida, né? Tipo, a Sam perguntou assim, eu vi lá que o Juan colocou que você pode contratar para quantos usuários você quer. Eu não gosto daquela opção. Eu acho que o ideal mesmo é a gente colocar... Você contrata por um pacote, sabe? Ah, você tem um pacote. Por quê?
+
+8:58 - Unidentified Speaker
+Porque posição já é assim no Recruta.
+
+9:01 - Renato Teixeira
+Que é só o que você quer. Opa, você não coloca no Recruta quantas posições você quer. Você tem um pacote, até 10, até 20, até 30, e isso faz com que a pessoa depois um plano maior, ela vai negociar com a gente. Então, eu acho que o excelente ponto aqui, a gente tem que anotar que é, mas a gente tem que validar, né? Uma validação, uma dúvida. Usuários totais ou pacote de usuários? E para o pacote de usuários é até 10 usuários, até 20 usuários, até 30 usuários, acima de tantos usuários, tanto. E eu acho que uma das coisas que a gente pode usar é pegar outras plataformas que fazem esse fazer tipo de cobrança e comparar. E se eu não me engano, quase todas elas fazem para o pacote.
+
+9:50 - Mike Araujo
+Uma dúvida também. Hoje a gente tem bem definido como que vai ser o método de cobrança. A gente, por exemplo, com essa questão do rebranding, toda essa mudança para BQture, etc. A gente pretende estruturar de uma outra forma a questão dos planos e cobrança. Em relação ao que a gente já tem hoje? Porque hoje eu entendo que a gente tem uma forma de negociar, a gente tem um preço por usuário, por módulo ali, né? Mas a gente não tem planos definidos em relação a, por exemplo, isso que você está comentando sobre pacote. A gente vai estruturar planos diferentes para diferentes níveis de cliente, com nomes, por exemplo, Enterprise.
+
+10:37 - Renato Teixeira
+Eu acho que, cara, eu acho que é uma boa, cara. Só que eu acho que é uma boa, porque assim, eu entendo que ficar contratando módulos separados, assim, o cara não conhece nada, ele vai contratar um módulo separado, ele não vai entender bem o que é, entendeu? Eu acho que precisa começar com... Eu gosto dessa ideia, eu acho que a gente pode sugerir, e aqui colocar na transcrição é, sugerir pacotes básicos, sabe? Você pode contratar pacotes básicos e pode contratar pacotes Entendeu? E você pode alterar seu pacote conforme você quiser. Mas sugerir para o cara algum pacote para ele não ficar perdido. Putz, eu quero contratar esse módulo. O que esse módulo faz? Mas eu boto um, boto outro. Tipo, é um excesso de customização que para um cara que não tem muita... Não tem muito traquejo, é mais complicado do que ajuda. Então eu gosto, sim, dessa ideia, sabe? Você pode contratar... Você tem um pacote... Opa! Você tem um pacote o pacote básico ali que garante o que? O pacote básico garante inclusive o MRR básico, entendeu? Talvez não compense deixar ali, cara, um usuário para o módulo.
+
+11:48 - Mike Araujo
+Não paga a conta.
+
+11:49 - Mike Araujo
+Sim, exato.
+
+11:50 - Renato Teixeira
+Entendeu? Tem que ter um mínimo. Tem que ter um mínimo. Não compensa para o recruta botar uma posição durante 15 dias. O mínimo é duas posições por mês. O mínimo é um pacote de tal coisa, né? Durante tanto tempo. E com esses módulos aqui, você vai ter um módulo de tarefa, a gente pode até colocar, por exemplo, ganho módulo de tarefas, contrate um módulo de gestão desempenho, ganho de módulo de tarefas, você pode pegar aqui o de comunicação, mais não sei o que e fazer, depois o cara pode adicionar. Então, gosto dessa ideia de fazer pacotes ao invés de só deixar aberto para o cara selecionar tudo o que ele quer. É legal na teoria, mas acho que na prática não garante para gente um MRR mínimo.
+
+12:35 - Mike Araujo
+Muitas possibilidades também de configuração. Muito difícil de selecionar.
+
+12:38 - Renato Teixeira
+Esse aqui é um botão e quer fazer, entendeu? E também o usuário, às vezes, ele pode nem ter ideia.
+
+12:44 - Mike Araujo
+Pô, o que será que eu preciso, sabe? O que que eu preciso para, tipo, a minha empresa? Se você dá um direcionamento do pacote ali que pode funcionar para ele falar, pô, é isso aqui que eu preciso mesmo, não tem porquê.
+
+12:57 - Mike Araujo
+Exato, exato.
+
+12:57 - Renato Teixeira
+Então eu acho que essa ideia de pacote é boa.
+
+13:00 - Mike Araujo
+Onde que eu pego aquela calculadora que ele Eu queria dar uma olhada naquilo só pra ter uma ideia do pensamento que ele tava seguindo em relação a isso. Pede pra ele, cara. Não sei onde tá.
+
+13:12 - Renato Teixeira
+Vou perguntar pra ele aqui. Mas, cara, eu achei que pode trazer esse questionamento na hora, cara.
+
+13:18 - Mike Araujo
+Eu acho que esse questionamento é muito bom. Em relação aos pacotes?
+
+13:22 - Renato Teixeira
+É, sabe. Eu tava vendo que tinha alguma coisa errada, eu não tava sabendo dizer o que, cara. Mas é justamente isso, assim. É... Tem que ter alguma coisa que facilite para o cara ele já pagar na hora, sabe?
+
+13:36 - Mike Araujo
+É muito mais fácil a experiência de compra, o cara vai entrar ali, vai selecionar e tipo essa parte de setup, entre aspas, que às vezes leva duas semanas para o usuário que a gente tem hoje e que mesmo no self-service se ele tivesse a possibilidade de configurar levaria bastante tempo, né, para ele decidir internamente uma mensagem, ele levaria em minutos, assim, pô, vai ser isso aqui mesmo, entrou, já começou a fazer o onboarding, tá dentro da plataforma, configurou o que precisa lá, fez a carga de usuário, pronto.
+
+14:11 - Renato Teixeira
+Entendeu? Eu concordo. Eu acho que uma outra premissa que a gente pode colocar é, na primeira utilização, quando o cara faz a compra do pacote, ele tem ali um, ele tem essa ajuda, né, para fazer a utilização no fundo da plataforma. Ele tem um how-to ali, né, como utilizar aquele módulo, como fazer isso para todos os módulos.
+
+14:33 - Unidentified Speaker
+Entendeu?
+
+14:34 - Unidentified Speaker
+Então, acho que isso é bacana.
+
+14:36 - Renato Teixeira
+Esse é uma premissa que a gente pode colocar também, que é bem interessante. A customização, eu acho que tem que ser em cima dos planos-base, sabe? A gente tem que definir planos-base, que você tá falando, cara. Quais são os planos-base, e aí você pode, e assim, o Você precisa de um incentivo para pegar um enterprise, sabe? E qual que vai ser o incentivo que vai ter para pegar um enterprise? Se o cara pode fazer tudo por ali. Essa questão que ele falou que empresas grandes utilizam cartão, isso é mentira, é o contrário. Empresas grandes não utilizam cartão. Tem pagamento boleto, esse tipo de coisa? Não, não. Você tem que fazer negociação de contrato. Outra premissa. Pode falar. Tabela de preço, self-service versus comercial. Porque assim, como é que, porque que o cara vai falar com você se é a mesma coisa, entendeu?
+
+15:30 - Mike Araujo
+Parece sentido, eu não sei, provavelmente vocês já devem ter isso, um mapeamento de ECP, por exemplo, o cara que tem tantos funcionários, com tanto faturamento, fica, faz só self-service, né, faz o autocontrato ali, ele mesmo faz a parte de configuração onboarding, contrato pela site, e quando ele chega que entende que vai trazer uma complexidade maior de negociação, aí já entra na negociação comercial. Não, isso é mais pelo enterprise, cara.
+
+15:58 - Mike Araujo
+Você clica no enterprise e faz.
+
+16:00 - Renato Teixeira
+E já fala com a pessoa. Mas aí fica dependente da pessoa, né?
+
+16:04 - Mike Araujo
+É, exatamente. Você vai lá e pede uma demo, pede uma demonstração.
+
+16:08 - Renato Teixeira
+Tem que ter lá, né? Outra premissa, cara. Tem dúvidas? Fale com nosso time comercial, fale com nosso time de suporte. Não pode deixar de ter, sabe? Só o self-service, ainda mais não vende, se o cara for maior, se o cara tiver dúvida, ele quer um pouco de segurança. Então, a gente não pode tirar o canal de comunicação com as pessoas, a gente tem que facilitar para quem tem traquejo de utilização, mas para quem não tem, tem que ter a forma de conseguir falar com as pessoas, né, enfim, e conseguir falar com alguém e ter informação sobre planos, essa outra premissa que tem que ter. Isso é muito importante, aliás, muito importante.
+
+16:52 - Mike Araujo
+Outra dúvida, mais para parte do agora, do que a gente tá fazendo em relação ao back office e tudo mais ali. Faz sentido, tipo, tudo que a gente tá fazendo, botando a mão na massa, sem definir essa parte dos planos e ter algo assim?
+
+17:09 - Renato Teixeira
+Faz, faz, faz, porque a gente tá desenhando agora uma parte da outra premissa, saber o módulo de cobrança, que a gente sabe que é por usuários ativos, e a gente tá fazendo o cálculo de usuários ativos no mês, então faz toda a diferença. Só que a gente tá falando agora do futuro, para conseguir, né, para os próximos módulos a serem desenvolvidos, a gente já ter uma ideia daquilo que a gente vai querer lá no final.
+
+17:33 - Mike Araujo
+Perfeito.
+
+17:34 - Renato Teixeira
+Só para entender. Então, acho que é isso. Acho que isso é uma questão... São premissas de negócio, acho que vão ter mais premissas de negócio ali que a gente não sabe como... Quais vão ser, mas eu acho que essas são básicas ali, né. Deixa eu ver o que mais, deixa eu ver o que mais, deixa eu ver o que mais. A gente falou desses tópicos, então a gente falou sobre o módulo, a gente falou sobre os planos, a gente falou sobre a recorrência, a gente falou sobre os... Cara, o formato de pagamento tem que ter todos, né, tem que ter pics, tem que ter boleto, tem que ter... Na verdade, pode ter boleto, O boleto geralmente é mais chato de tratar. Mas eu não sou muito a favor de boleto mas tem que ter cartão e Pix com certeza. E assim eu faria algumas coisas já falando meio que para como é Pix para mim só se for fechado Pix mensal e boleto mensal não dá muito certo. Mas aí enfim vamos ver como a gente vai tratar isso eu acho que não é não é o ideal o cartão você pode fazer para debita e vai tranquilo.
+
+18:39 - Mike Araujo
+Em relação àquela conversa de freemium que a gente teve, o cara teria teste grátis ou algo nesse sentido? Porque aí mudaria a forma de pagamento, né? Mudaria o formato. Eu acho que é uma dúvida.
+
+18:53 - Renato Teixeira
+Vamos ter teste grátis ou não vamos ter? Não sei. Não sei. Vamos querer ter teste grátis? É uma dúvida. O que a gente vai resolver? Isso faz parte também de coisas que a gente precisa de... De entender. Beleza. Se vai ter freeme, se não vai, né?
+
+19:12 - Unidentified Speaker
+Se vai poder ter teste grátis, não vai.
+
+19:16 - Renato Teixeira
+E aí, se tiver, são outros 500, é outra coisa. E também, e aí a gente começa, né, falando de premissas técnicas, né? Acho que uma premissa técnica principal é qual vai ser o broker que a gente vai utilizar para gerenciar as assinaturas. Porque tem valor, tem taxa, tem API, tem modelo de cobrança, né? Então, assim, tem modelo de cobrança que aceita com assinaturas que são feitas de formas diferentes. A gente já tem integração com o Yugo que pode ajudar, mas está num CNPJ, tem que talvez construir isso. Então, uma premissa técnica importante é qual é o broker de pagamento que a gente vai utilizar para gerenciar isso.
+
+20:05 - Unidentified Speaker
+Perfeito.
+
+20:05 - Renato Teixeira
+Outra premissa técnica importante é, cara, a gente precisa ter período de gerenciamento dessas assinaturas dentro da plataforma para um time de CS. Não dá para ficar pegando, entrando no Yugo, fazendo isso, sabe? É... Isso é horrível, né? Entre esse ponto, lembrei de uma... De um requisito de usuário, que não tem no Recruta, e é muito importante. As pessoas têm que ser capazes de baixar a nota fiscal dentro da plataforma. Isso abre chamado, isso é um saco, assim, e tem as notas fiscais, né, o módulo tem que estar conectado com o módulo de geração de nota, que é um requisito técnico, né, gerar nota, gerar nota fiscal automaticamente, e essa nota fiscal tem que estar disponível para o usuário, né, conseguir fazer o download se ele precisar. Isso é muito importante, né, isso erita chamado, isso dá um monte de, enfim, tem uma série de benefícios ter e malefícios não tê-le. Eu acho que assim, o módulo de billing não é um módulo que tenha muita necessidade de IA, a questão é muito operacional, é muito de operação processual, então é bem processual, então acho que isso fica mais fácil pra gente em termos de IA.
+
+21:25 - Mike Araujo
+Uma coisa talvez seja interessante no sentido de IA, mas é tipo um nice to have nesse caso, Por exemplo, o cara tem muita dúvida em relação ao plano que ele vai contratar, ou mesmo se ele vai necessitar de um enterprise ou algo do tipo. Tem um chat ali onde ele troca uma ideia com o chat e o chat pega umas informações com ele e sugere pra ele, tipo, ah, você, no seu caso, talvez seja mais interessante você falar com o time comercial. No seu caso, faz mais sentido o plano X, o plano Y, algo nesse sentido.
+
+21:59 - Renato Teixeira
+É, a gente pode colocar um chat de A pra falar sobre planos, explicar para ele, falar sobre preço, tirar dúvida. Pode ter um agente ali que troca ideia com ele a respeito dos planos, assim, ah, sei lá, pega uma nota fiscal para mim, eu quero a minha nota fiscal do mês de março, me manda para esse link e vai fazendo isso. Isso pode ter. Não acho que é o principal, não acho que é uma premissa, mas é um nice to have. Beleza, se der para a gente colocar depois, ok. Mas como é um módulo que é pouco utilizado, você não fica tirando nota fiscal o tempo inteiro, é tão simples quanto deixar um nível ali pra ele fazer é ok.
+
+22:35 - Unidentified Speaker
+Sim.
+
+22:35 - Renato Teixeira
+Eu acho que isso dá conta. Certo? Certo. Que mais a gente tá falando? Deixa eu ver aqui. Outros tipos de cobrança, né, via fatura para gate, pagamento via plataforma, conciliação, diálogo automático de geração de faturas, aí já é uma questão mais Eu não acho que precisa de Job de geração de faturas, eu acho que se a gente pegar o Broker, o Broker faz isso.
+
+23:08 - Mike Araujo
+Quando você se refere ao Broker, você tá falando de Gateway ou são coisas diferentes?
+
+23:13 - Mike Araujo
+Qualquer coisa, é o Yugo, é o Gateway de pagamento.
+
+23:16 - Renato Teixeira
+Ele faz isso automático, quando você gera fatura, você cadastra lá, você faz a assinatura, ele faz isso pra você. Entendi. Entendeu? O Yugo faz isso, você já viu o Yugo ou não?
+
+23:28 - Mike Araujo
+Eu já vi, já. O preço que eu trabalhei, eu utilizava o Yugo.
+
+23:33 - Renato Teixeira
+Então, você criou a assinatura, acabou. Ele gera tudo, ele gera fatura, ele gera os e-mails de cobrança, ele bloqueia, ele desbloqueia, ele te avisa como tá, como tá. Talvez tenha alguns outros jobs ali, mas aí é uma questão de pensar.
+
+23:47 - Mike Araujo
+É boa parte do trabalho, né?
+
+23:49 - Renato Teixeira
+Toda a parte do trabalho. Então, acho que esse V5 não precisa. Relatórios para agregue de utilização, mudança dos clientes que impactam faturamento. Beleza, eu acho que tem aquele módulo que a gente falou de gerenciamento, né? É uma premissa ter, uma premissa ou, na verdade, é uma premissa mais nice to have, né? A gente ir incrementando o nosso módulo de gerenciamento, né? Assinaturas que estão ativas, total de faturamento previsto para o mês, né, baseado nas assinaturas, tem um dashboard ali, né, de usuários ativos, usuários ativos por, Eu acho que uns nice to have que a gente pode colocar também, por exemplo, upsell. Como é que a gente faz upsell? Poxa, o cara que tá clicando muito dentro do módulo de planos e ele, sei lá, abriu duas vezes, mas não assinou mais. Vamos entrar em contato com esse cara? Vamos fazer um upsell? Isso é legal, hein?
+
+24:45 - Mike Araujo
+Entendeu?
+
+24:46 - Renato Teixeira
+Isso é uma questão de billing. O cara tentou adicionar vamos falar com esse cara, vamos entrar em contato com ele. Para fechar um pacote maior de usuários. Exato, então assim, o financeiro também pode ter um upsell, entendeu? Pode ajudar a gente com upsell. A gente pode, enfim, esse é um ponto. Então assim, a gente precisa agora pensar nesses pontos que a gente falou aqui, depois pegar ele e fazer umas versões, né? Tem que considerar que nem tudo pode, não vai ser tudo de uma vez, né? Tudo de uma única vez, mas como é que seriam esses módulos, né? Uma das coisas que eu entendo é que, assim, para self-service, a primeira coisa que a gente tem que fazer de tudo é saber qual que é o gate de pagamento. A gente precisa definir isso, porque o gate de pagamento, ele é uma baita restrição ou validação de como é que vai ser possível gerenciar essas assinaturas. Não adianta a gente ter um gate, a gente falar assim, ah, cara, eu quero criar assinatura todo Meu, e aí o Gateway não deixa. Vai ter um baita trabalho. Entendeu? Então a gente tem que definir isso e fazer da maneira que o Gateway permite a gente fazer. E a gente sim fica um pouco preso ao Gateway.
+
+25:58 - Mike Araujo
+E o Gateway tem a questão das taxas, né? É muito mais complicado que apenas funcionalidade, etc. Exato. A gente tem que testar alguns Gates, assim.
+
+26:06 - Renato Teixeira
+A não ser que a gente possa também fazer, que é, cara, vamos pro Yugo e tudo bem. E eu sou a favor. Sabe? Eu acho que o Hugo não tem taxas que são muito acima do mercado, ele já é conhecido. As APIs dele são boas? Não. Na verdade, sim. O pacote que ele tem, ele tem um SDK que não é bom. As APIs dele são boas.
+
+26:30 - Mike Araujo
+O pacote SDK dele que não é legal. SDK é documentação de integração, essas coisas?
+
+26:35 - Renato Teixeira
+Não. O SDK é assim, você tem as APIs, certo? Você tem API que você pode bater. O SDK A biblioteca que você instala, que ao invés de você ficar criando a chamada para API, ao invés de ficar lá www barra yugo barra isso, v2 list, ele já tem um método, tipo assim, client.list. E aí ele automaticamente vai lá, bate na API e te traz o valor. Você não precisa ficar implementando as APIs mão a mão. Você instala a biblioteca e ele já bate nas APIs para você. Você só chama o método.
+
+27:10 - Mike Araujo
+Sim. É, considerando a utilização do Gateway fica muito mais claro na minha cabeça o fluxo assim porque na versão anterior que a gente estava pensando a gente estava considerando só a boleta e essa parte de conciliação para um outro momento mas eu acho que o Gateway talvez entre até com uma das primeiras etapas de seleção junto com a questão dos planos ali que a gente já facilita todo o resto do fluxo.
+
+27:35 - Renato Teixeira
+A gente precisa fazer um trabalho sobre o Gateway então uma premissa é fazer uma outra premissa é fazer uma escolha do gateway a ser utilizado. Por quê? Porque ele ajuda a gente a definir modelo de assinatura, taxas, cobranças, comunicação, pagamento, tudo, entendeu? Então, tem que tudo ter feito isso. Ah, uma outra premissa. O módulo de gerenciamento interno tem que ser capaz de criar os planos, fazer as alterações dentro desse gateway. Pra quê? Porque acho que uma das coisas que a gente precisa de ter, que hoje no Recurta não é, a gente entra muito dentro do gateway.
+
+28:17 - Unidentified Speaker
+Isso é ruim.
+
+28:18 - Renato Teixeira
+Toda hora tem que ficar entrando no Yugo, criando planos, criando assinatura. Não, eu deveria fazer isso dentro do nosso módulo de gerenciamento se eu quiser fazer um enterprise.
+
+28:28 - Mike Araujo
+Eu não ter que ficar entrando no gateway pra fazer.
+
+28:31 - Renato Teixeira
+Faz sentido. Entendeu? Usar o gateway o mínimo possível. Então, assim, utilizar o máximo possível as APIs do Gateway para criar os planos, buscar relatórios, ativar e desativar usuários, ativar e desativar assinaturas, pegar as informações que eu preciso. Isso é muito importante. Perfeito. Então, a própria estrutura das telas vai funcionar com base no esqueleto que vai ser o Gateway, né?
+
+28:55 - Mike Araujo
+Exato. Então, assim, eu tenho muita...
+
+28:57 - Renato Teixeira
+De novo, a gente tem muito conhecimento do Yugo, cara. Eu vou propor o Yugo, a gente pode pegar um, dois ou três e dá uma olhada ver se tem taxas que encorajariam a gente a utilizar. Porque se o cara falar assim, meu, eu tenho uma taxa que é metade do valor. Ah, pô, vamos pro outro. Mas assim, ah, não, a taxa tá 5% mais barata. Fala, cara, 5% vai custar a nossa, vai ser nossa saúde mental aqui para aprender a lidar com ele, descobrir o que é bom, o que não é bom. Entendeu?
+
+29:27 - Mike Araujo
+É, a curva de aprendizagem talvez não valha a pena nesse caso, né?
+
+29:31 - Renato Teixeira
+Exato, no Yugo a gente tem essa curva total ali, os reais estão meio que já feitas, não é muito difícil de fazer, já tá linkado, a gente só vai ter que, por exemplo, Ok, trocar fácil o banco, de criar fazer. Uma Perfeito, conta legal. Nova, E mas tudo isso, cara, a gente precisa te colocar nesse plano, né? Então a gente precisa colocar, fazer daqui, a gente precisa fazer, tipo, cara, nice to have, premissas, né? O que que vai ter no módulo, o que que vai ser o produto, o que que vai ser o módulo de gerenciamento e o que que vai ser o gateway, né? Essas três coisas a gente separa em premissas, nice to have, E a gente falou também do objetivo e do Reason to Believe. Por que a gente quer fazer isso? Isso daqui, se a gente montar isso, a gente depois parte para as versões. Eu acho que a gente precisa montar essas premissas e ver isso encaixado para a gente conseguir colocar em uma versão, para conseguir botar nas versões, sabe?
+
+30:36 - Mike Araujo
+As versões já visuais, você fala, né?
+
+30:39 - Renato Teixeira
+uma ideia de versão. Versão 1 vai ter isso, versão 2 vai ter aquilo, porque eu acho que essa versão que a gente fez aqui do Franco foi legal para a gente ter uma ideia, mas eu acho que ela tá factível, entendeu? Por exemplo, a job pra gerar fatura, não precisa. Entendeu? O cara gera isso automático. Entendi, beleza.
+
+31:01 - Mike Araujo
+Pô, eu tava com uma coisa na cabeça que Ah, não vou lembrar agora, depois eu falo.
+
+31:12 - Mike Araujo
+Tava na minha cabeça e fugiu.
+
+31:15 - Renato Teixeira
+Mas era um ponto sobre isso. Beleza. Enfim, vamos pensar nisso e se você quiser fazer uma proposta de versão, pode até ser. Ah, lembrei, lembrei.
+
+31:30 - Mike Araujo
+A gente vai fazer essas versões já no visual novo.
+
+31:36 - Renato Teixeira
+Sim, no Visual Novo. Tudo no Visual Novo. A gente vai pensar tudo. Inclusive, a gente vai fazer esse material. Eu quero alguma coisa parecida com isso aqui. Deixa eu te mostrar. A gente vai utilizar isso aqui. Vou te passar esse arquivo. É um dos arquivos que o Juan ficou de passar. Tá vendo aqui? Estou vendo. Ele faz esse, tá vendo? Já tem aqui as telas, as cores, etc. Beleza? Beleza. Eu vou te passar esse arquivo, que já tem tudo ali, e aí você compila, faz essa apresentaçãozinha com essas premissas, coloca separado, joga no cursor que ele vai mexer para você, eu vou te passar a transcrição dessa reunião, e aí você pega a transcrição, se quiser jogar a transcrição toda lá no cursor e pedir para ele fazer, acho que ele vai fazendo, vai preparando.
+
+32:43 - Unidentified Speaker
+Perfeito.
+
+32:43 - Renato Teixeira
+Essa apresentação que ele fez foi em qual ferramenta?
+
+32:47 - Mike Araujo
+No cursor mesmo?
+
+32:48 - Renato Teixeira
+Ele fez no Cloud, cara, mas eu tentei fazer no Cloud e não gostei muito. Tá. Tá. Deixa eu ver Fireflies. Eu vou entrar aqui. Deixa eu ver aqui. Só vai acabar a transcrição depois que eu acabar de... A reunião. Beleza? E eu vou te passar aqui, vou te passar a transcrição, aí eu vou te passar esse arquivo.
+
+33:12 - Unidentified Speaker
+Deixa eu te mandar esse arquivo de última vez.
+
+33:16 - Mike Araujo
+Uma dúvida, a gente tem a reunião de grooming com o Franco às três e meia, a gente mantém?
+
+33:24 - Renato Teixeira
+Mantém, porque é pra falar só do módulo de... O primeiro, o V0 do V0 do V0. Ó, eu te passei aqui, pede pra ele usar esse, faz em HTML mesmo. Enfim, dá. Seja criativo.
+
+33:44 - Unidentified Speaker
+Tá bom, beleza.
+
+33:46 - Unidentified Speaker
+Fechou? Fechou.
+
+33:47 - Unidentified Speaker
+Obrigado, cara.
+
+33:48 - Unidentified Speaker
+Valeu, Renato.
+
+33:50 - Unidentified Speaker
+Tchau, tchau. Valeu.

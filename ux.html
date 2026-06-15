@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regras de UX — Kit de Produto</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><span class="dot">◆</span> Kit de Produto</div>
+    <div class="group-label">Começar</div>
+    <a href="index.html"><span class="ico">⌂</span> Visão geral</a>
+    <a href="papeis.html"><span class="ico">⚑</span> Papéis & responsabilidades</a>
+    <a href="processos.html"><span class="ico">⟳</span> Processos & rituais</a>
+    <div class="group-label">Estratégia</div>
+    <a href="nucleo.html"><span class="ico">◎</span> Núcleo do produto</a>
+    <a href="jornada.html"><span class="ico">↗</span> Jornada para o sucesso</a>
+    <div class="group-label">Experiência</div>
+    <a class="active" href="ux.html"><span class="ico">◇</span> Regras de UX</a>
+    <a href="ui.html"><span class="ico">▣</span> UI Kit</a>
+    <a href="tokens.html"><span class="ico">◈</span> Design Tokens</a>
+    <div class="group-label">Qualidade</div>
+    <a href="checklists.html"><span class="ico">✓</span> Checklists</a>
+  </aside>
+
+  <main class="content">
+    <div class="page-head">
+      <span class="eyebrow">Experiência</span>
+      <h1>Regras de UX</h1>
+      <p class="lead">Princípios que não são gosto — são como a mente humana funciona. Use como lente para auditar qualquer tela e como vocabulário comum nas critiques.</p>
+    </div>
+
+    <h2>Leis de UX</h2>
+    <p>Princípios de psicologia aplicados a design. Cada um vem com a implicação prática.</p>
+    <table>
+      <thead><tr><th>Lei</th><th>O que diz</th><th>Implicação no design</th></tr></thead>
+      <tbody>
+        <tr><td><b>Lei de Hick</b></td><td>Mais opções = mais tempo para decidir.</td><td>Reduza escolhas por tela. Agrupe, esconda o avançado, dê um caminho-padrão.</td></tr>
+        <tr><td><b>Lei de Fitts</b></td><td>Quanto maior e mais perto o alvo, mais rápido de clicar.</td><td>Botões primários grandes. Alvos de toque ≥ 44px. Ações frequentes ao alcance.</td></tr>
+        <tr><td><b>Lei de Jakob</b></td><td>O usuário espera que você funcione como os outros sites que ele já usa.</td><td>Não reinvente padrões consagrados (carrinho, login, busca). Inove no valor, não na mecânica.</td></tr>
+        <tr><td><b>Lei de Miller</b></td><td>A memória de trabalho segura ~7 (±2) itens.</td><td>Quebre informação em blocos. Paginação, steps, chunking.</td></tr>
+        <tr><td><b>Lei de Tesler</b></td><td>Toda complexidade tem um mínimo irredutível — alguém vai carregá-la.</td><td>Absorva a complexidade no produto, não jogue no usuário.</td></tr>
+        <tr><td><b>Proximidade (Gestalt)</b></td><td>Itens próximos são percebidos como grupo.</td><td>Use espaçamento, não linhas, para agrupar. Espaço é estrutura.</td></tr>
+        <tr><td><b>Lei de Postel</b></td><td>Seja tolerante no que recebe, rigoroso no que envia.</td><td>Aceite formatos variados em inputs; entregue feedback claro e consistente.</td></tr>
+        <tr><td><b>Efeito Zeigarnik</b></td><td>Tarefas incompletas ficam na memória.</td><td>Barras de progresso e checklists puxam a conclusão.</td></tr>
+        <tr><td><b>Efeito Von Restorff</b></td><td>O item diferente é o lembrado.</td><td>Destaque <i>uma</i> ação por tela. Se tudo grita, nada é ouvido.</td></tr>
+        <tr><td><b>Efeito de pico-fim</b></td><td>Lembramos do pico e do fim, não da média.</td><td>Capriche nos momentos-chave e na conclusão (sucesso, confirmação).</td></tr>
+      </tbody>
+    </table>
+
+    <h2>10 Heurísticas de Nielsen</h2>
+    <p>O checklist universal de usabilidade. Use para avaliação heurística de qualquer fluxo.</p>
+    <div class="grid grid-2">
+      <div class="card"><h3>1 · Visibilidade do status</h3><p>O sistema sempre informa o que está acontecendo (loading, salvo, erro).</p></div>
+      <div class="card"><h3>2 · Sistema ↔ mundo real</h3><p>Fale a língua do usuário, não a do sistema. Ordem lógica e familiar.</p></div>
+      <div class="card"><h3>3 · Controle &amp; liberdade</h3><p>Saídas de emergência: desfazer, cancelar, voltar. Erros não são becos sem saída.</p></div>
+      <div class="card"><h3>4 · Consistência &amp; padrões</h3><p>A mesma coisa se chama e se comporta igual em todo lugar.</p></div>
+      <div class="card"><h3>5 · Prevenção de erros</h3><p>Melhor evitar do que avisar. Restrinja, confirme ações destrutivas.</p></div>
+      <div class="card"><h3>6 · Reconhecer &gt; lembrar</h3><p>Mostre as opções; não faça o usuário memorizar. Reduza carga de memória.</p></div>
+      <div class="card"><h3>7 · Flexibilidade &amp; eficiência</h3><p>Atalhos para experts, caminho guiado para novatos.</p></div>
+      <div class="card"><h3>8 · Estético &amp; minimalista</h3><p>Cada elemento extra compete com o essencial. Corte o que não serve.</p></div>
+      <div class="card"><h3>9 · Recuperar de erros</h3><p>Mensagens em linguagem clara: o que houve e como resolver. Sem códigos.</p></div>
+      <div class="card"><h3>10 · Ajuda &amp; documentação</h3><p>Quando precisar, a ajuda é fácil de achar e focada na tarefa.</p></div>
+    </div>
+
+    <h2>Acessibilidade — WCAG essencial</h2>
+    <p>Acessibilidade não é feature opcional — é qualidade base. Mínimo a garantir em toda entrega:</p>
+    <table>
+      <thead><tr><th>Critério</th><th>Regra prática</th></tr></thead>
+      <tbody>
+        <tr><td><b>Contraste</b></td><td>Texto normal ≥ 4.5:1 · texto grande ≥ 3:1 (ver <a href="tokens.html">tokens</a>).</td></tr>
+        <tr><td><b>Alvo de toque</b></td><td>≥ 44×44px, com espaçamento entre alvos.</td></tr>
+        <tr><td><b>Teclado</b></td><td>Tudo navegável só com teclado. Foco visível sempre.</td></tr>
+        <tr><td><b>Cor não é único sinal</b></td><td>Erro/sucesso também por ícone ou texto, nunca só cor.</td></tr>
+        <tr><td><b>Textos alternativos</b></td><td>Imagens com <code>alt</code> significativo; decorativas com alt vazio.</td></tr>
+        <tr><td><b>Labels</b></td><td>Todo campo tem label visível associado. Placeholder não é label.</td></tr>
+        <tr><td><b>Movimento</b></td><td>Respeite <code>prefers-reduced-motion</code>. Nada que pisque &gt; 3x/s.</td></tr>
+        <tr><td><b>Estrutura semântica</b></td><td>Headings em ordem, landmarks, ARIA só quando HTML nativo não basta.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Microcopy — escrever para a interface</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3><span class="pill do">Faça</span></h3>
+        <ul class="check">
+          <li>Verbo de ação no botão ("Salvar alterações", não "OK")</li>
+          <li>Erro diz a causa e a saída</li>
+          <li>Linguagem do usuário, não do sistema</li>
+          <li>Conciso: corte palavras que não mudam o sentido</li>
+          <li>Tom alinhado ao <a href="nucleo.html">núcleo</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><span class="pill dont">Evite</span></h3>
+        <p><span class="pill dont">✗</span> "Erro 422" → <span class="pill do">✓</span> "O e-mail já está em uso. Tente outro ou faça login."</p>
+        <p><span class="pill dont">✗</span> "Tem certeza?" → <span class="pill do">✓</span> "Excluir 3 itens? Isso não pode ser desfeito."</p>
+        <p><span class="pill dont">✗</span> "Enviar" (vago) → <span class="pill do">✓</span> "Enviar pedido"</p>
+      </div>
+    </div>
+
+    <h2>Estados que toda tela precisa cobrir</h2>
+    <p>Um fluxo não está pronto enquanto os 5 estados não forem desenhados. O "estado feliz" é só um deles.</p>
+    <div class="grid grid-3">
+      <div class="card"><h3>1 · Vazio</h3><p>Primeira vez / sem dados. Explique o valor e dê o primeiro passo.</p></div>
+      <div class="card"><h3>2 · Carregando</h3><p>Skeleton ou spinner. Nunca tela em branco sem sinal.</p></div>
+      <div class="card"><h3>3 · Ideal</h3><p>Com dados, tudo certo. O "estado feliz".</p></div>
+      <div class="card"><h3>4 · Erro</h3><p>Algo falhou. O que houve + como recuperar.</p></div>
+      <div class="card"><h3>5 · Parcial / borda</h3><p>1 item, 10.000 itens, texto longo, offline. Edge cases reais.</p></div>
+    </div>
+
+    <div class="callout">
+      <div class="t">Avaliação heurística em 15 min</div>
+      <p style="margin:0">Pegue um fluxo. Para cada tela, passe as <b>10 heurísticas</b> e os <b>5 estados</b>. Anote violações com severidade (1 cosmético → 4 bloqueador). É o jeito mais barato de achar problema antes do usuário.</p>
+    </div>
+
+    <div class="foot">
+      <span><a href="nucleo.html">← Núcleo</a></span>
+      <span><a href="ui.html">UI Kit →</a></span>
+    </div>
+  </main>
+</div>
+</body>
+</html>
