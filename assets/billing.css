@@ -144,6 +144,86 @@
   margin-bottom: 6px;
 }
 
+/* Benchmark gateways */
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.benchmark-table th:not(:first-child),
+.benchmark-table td:not(:first-child) {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.benchmark-table td:first-child {
+  min-width: 200px;
+}
+
+.benchmark-note {
+  font-size: 13px;
+  color: var(--text-subtle);
+  margin-bottom: 16px;
+}
+
+.flow-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.flow-step {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.flow-step:last-child {
+  border-bottom: none;
+}
+
+ol.numbered {
+  margin: 0 0 12px 1.2em;
+  padding: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+ol.numbered li { margin-bottom: 4px; }
+
+.rank-card h3 { margin-bottom: 8px; }
+
+ul.refs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.refs li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+ul.refs a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+ul.refs a:hover { color: var(--text); }
+
+.benchmark-top3 .stat-card .num {
+  font-size: 22px;
+}
+
 /* Anchor nav smooth */
 html { scroll-behavior: smooth; }
 

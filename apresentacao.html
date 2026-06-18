@@ -35,6 +35,7 @@
     <a href="#produto"><span class="ico">◇</span> Módulo cliente</a>
     <a href="#gerenciamento"><span class="ico">⚑</span> Backoffice & CS</a>
     <a href="#gateway"><span class="ico">⟳</span> Gateway (Iugu)</a>
+    <a href="#benchmark"><span class="ico">⊞</span> Benchmark gateways</a>
 
     <div class="group-label">Avançar</div>
     <a href="#nice-to-have"><span class="ico">+</span> Nice to have</a>
@@ -229,7 +230,7 @@
             <td><input type="checkbox" data-id="t01"></td>
             <td><b>Escolha do gateway</b></td>
             <td><span class="pill status-duvida">Dúvida</span></td>
-            <td>Provável Iugu (ainda não integrado; time já conhece e tem know-how). Comparar 1–3 opções de taxa.</td>
+            <td>Benchmark concluído: Vindi, Iugu e Pagar.me (ver seção Benchmark). Iugu com know-how interno.</td>
           </tr>
           <tr>
             <td><input type="checkbox" data-id="t02"></td>
@@ -509,6 +510,235 @@
       </table>
     </section>
 
+    <!-- BENCHMARK GATEWAYS -->
+    <section id="benchmark" class="section-block">
+      <div class="page-head">
+        <span class="eyebrow">Pesquisa</span>
+        <h1>Benchmark de gateways</h1>
+        <p class="lead">Análise de plataformas brasileiras com motor de assinatura e cobrança recorrente — critério central para o módulo de billing da BeCulture (SaaS, clubes, serviços e assinaturas).</p>
+      </div>
+
+      <div class="callout">
+        <div class="t">Critério de seleção</div>
+        <p style="margin:0">Priorizei gateways que não são apenas meios de pagamento, mas possuem <b>gestão de assinatura e cobrança recorrente na própria plataforma</b>. A Stripe foi considerada como referência internacional, porém é menos aderente ao cenário Brasil puro — recursos locais como PIX recorrente têm limitações de disponibilidade.</p>
+      </div>
+
+      <div class="stats-row benchmark-top3">
+        <div class="stat-card"><div class="num">1º</div><div class="lbl">Vindi</div></div>
+        <div class="stat-card"><div class="num">2º</div><div class="lbl">Iugu</div></div>
+        <div class="stat-card"><div class="num">3º</div><div class="lbl">Pagar.me</div></div>
+        <div class="stat-card"><div class="num">—</div><div class="lbl">Stripe (ref.)</div></div>
+      </div>
+
+      <h2>Comparativo geral</h2>
+      <div class="table-wrap">
+        <table class="benchmark-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Iugu</th>
+              <th>Vindi</th>
+              <th>Pagar.me</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>Gestão de assinaturas na plataforma</b></td><td>Sim</td><td>Muito forte</td><td>Sim</td></tr>
+            <tr><td><b>API para criar/controlar assinaturas</b></td><td>REST API</td><td>REST API</td><td>REST API</td></tr>
+            <tr><td><b>Webhooks de eventos</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>Cartão recorrente</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>Boleto recorrente</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>PIX</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>Parcelamento cartão</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>Emissão NF ou integração NF</b></td><td>Via integração/API</td><td>Forte</td><td>Normalmente via integração</td></tr>
+            <tr><td><b>Relatórios financeiros</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>Usuários / perfis de acesso</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>Controle de status da assinatura</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>Retentativa automática</b></td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+            <tr><td><b>Upgrade / downgrade</b></td><td>Sim</td><td>Sim</td><td>Depende da implementação</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>1. Iugu</h2>
+      <p>Uma das plataformas brasileiras mais usadas para SaaS e negócios com cobrança recorrente. Módulo específico de <strong>assinaturas</strong>: planos, ciclos e cobranças automáticas.</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="card-kicker">Assinaturas</span>
+          <h3>Recursos</h3>
+          <ul class="check">
+            <li>Criação de planos e ciclos personalizados</li>
+            <li>Cobrança mensal/anual, pró-rata, upgrade/downgrade</li>
+            <li>Cartão salvo, cobrança e retentativa automática</li>
+            <li>Estados: ativa, pendente, atrasada, cancelada</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Pagamentos & NF</span>
+          <h3>Meios e fiscal</h3>
+          <ul class="check">
+            <li>Cartão, boleto, PIX, link e checkout</li>
+            <li>NF via integração/API com sistemas fiscais externos</li>
+            <li>Fluxo: pagamento → webhook → sistema fiscal → NF</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card accent-left">
+        <span class="card-kicker">API</span>
+        <h3>Operações principais</h3>
+        <p>Criar cliente e assinatura, cancelar, consultar cobrança e receber eventos via webhook.</p>
+      </div>
+
+      <h3>Taxas aproximadas (Brasil)</h3>
+      <p>Valores variam por contrato. Referências de mercado:</p>
+      <table>
+        <thead><tr><th>Método</th><th>Taxa</th></tr></thead>
+        <tbody>
+          <tr><td><b>PIX</b></td><td>Negociado / percentual baixo</td></tr>
+          <tr><td><b>Boleto</b></td><td>~R$ 0,65 a R$ 1,60 (volume)</td></tr>
+          <tr><td><b>Cartão</b></td><td>~3% a 5%</td></tr>
+        </tbody>
+      </table>
+      <p class="benchmark-note">Exemplo divulgado para parceiros: boleto R$ 2,30 · PIX R$ 1,50 · cartão à vista 3,34% · parcelado 4,28% a 4,79%.</p>
+
+      <h2>2. Vindi</h2>
+      <p>Provavelmente a solução mais forte no Brasil quando o foco é <strong>assinatura e recorrência</strong>. Atende SaaS, clubes, educação, streaming e serviços mensais.</p>
+
+      <div class="flow-box">
+        <div class="flow-step"><b>1.</b> Cliente cria assinatura e escolhe plano (mensal, anual, parcelado)</div>
+        <div class="flow-step"><b>2.</b> Vindi gera cobrança e cliente paga</div>
+        <div class="flow-step"><b>3.</b> Status atualizado (ativo, atrasado, cancelado)</div>
+        <div class="flow-step"><b>4.</b> Webhook informa o sistema da BeCulture</div>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card accent-top">
+          <span class="card-kicker">Cobrança</span>
+          <h3>Recursos</h3>
+          <ul class="check">
+            <li>Renovação automática e gestão de contratos</li>
+            <li>Régua de cobrança e notificações</li>
+            <li>Cartão, boleto, PIX, débito, boleto híbrido</li>
+          </ul>
+        </div>
+        <div class="card accent-top">
+          <span class="card-kicker">NF — ponto forte</span>
+          <h3>Emissão fiscal</h3>
+          <p>Pagamento aprovado → evento → emissão NFS-e → envio ao cliente. Integração com NFe.io e outros.</p>
+        </div>
+      </div>
+
+      <h3>Taxas aproximadas</h3>
+      <p>Negociação comercial frequente. Referência PIX: 0,95% (mínimo R$ 1,60). Cartão e boleto dependem de volume e contrato.</p>
+
+      <h2>3. Pagar.me</h2>
+      <p>Muito utilizado por empresas que precisam de API forte e flexibilidade — marketplaces, SaaS e plataformas próprias.</p>
+
+      <div class="flow-box">
+        <div class="flow-step"><b>1.</b> Criar plano (ex.: R$ 200/mês) e associar cliente</div>
+        <div class="flow-step"><b>2.</b> Gateway cobra automaticamente (cartão tokenizado)</div>
+        <div class="flow-step"><b>3.</b> Webhook atualiza o sistema</div>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="card-kicker">Assinaturas</span>
+          <h3>Recursos</h3>
+          <ul class="check">
+            <li>Planos e cobranças recorrentes via API</li>
+            <li>Cartão, boleto e PIX</li>
+            <li>Documentação para desenvolvedor e webhooks</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="card-kicker">NF</span>
+          <h3>Integração externa</h3>
+          <p>Pagamento aprovado → webhook → sistema fiscal (NFe.io, Focus, Omie, ERP).</p>
+        </div>
+      </div>
+
+      <h3>Taxas aproximadas</h3>
+      <table>
+        <thead><tr><th>Método</th><th>Estimativa</th></tr></thead>
+        <tbody>
+          <tr><td><b>PIX</b></td><td>~0,5% – 1%</td></tr>
+          <tr><td><b>Cartão</b></td><td>~3% – 5%</td></tr>
+          <tr><td><b>Boleto</b></td><td>Valor fixo (negociado)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Mecanismo de assinatura — cenário SaaS</h2>
+      <p class="benchmark-note">Cliente compra plano Pro a R$ 199/mês:</p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="card-kicker">Iugu</span>
+          <h3>Fluxo</h3>
+          <ol class="numbered">
+            <li>Cria plano</li>
+            <li>Cliente cadastra cartão</li>
+            <li>Cobrança mensal automática</li>
+            <li>Se falhar: retentativa, evento e mudança de status</li>
+          </ol>
+          <p><span class="pill do">Bom para</span> SaaS pequeno/médio</p>
+        </div>
+        <div class="card accent-top">
+          <span class="card-kicker">Vindi</span>
+          <h3>Fluxo</h3>
+          <ol class="numbered">
+            <li>Cria contrato e define ciclo</li>
+            <li>Controla cobrança e inadimplência</li>
+            <li>Relatórios financeiros integrados</li>
+          </ol>
+          <p><span class="pill do">Bom para</span> Empresas que vivem de assinatura</p>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Pagar.me</span>
+          <h3>Fluxo</h3>
+          <ol class="numbered">
+            <li>Seu sistema controla mais regras</li>
+            <li>Gateway executa o pagamento</li>
+            <li>Webhook informa o resultado</li>
+          </ol>
+          <p><span class="pill do">Bom para</span> Time técnico forte e customização</p>
+        </div>
+      </div>
+
+      <h2>Ranking para o requisito BeCulture</h2>
+      <div class="grid grid-3">
+        <div class="card accent-top rank-card">
+          <span class="card-kicker">1º lugar · ★★★★★</span>
+          <h3>Vindi</h3>
+          <p>Melhor para SaaS com assinatura como coração do negócio: gestão financeira, NF e recorrência complexa.</p>
+        </div>
+        <div class="card rank-card">
+          <span class="card-kicker">2º lugar · ★★★★☆</span>
+          <h3>Iugu</h3>
+          <p>Melhor equilíbrio: API boa, PIX, boleto, cartão e assinatura pronta. Know-how interno já existente no time.</p>
+        </div>
+        <div class="card rank-card">
+          <span class="card-kicker">3º lugar · ★★★★</span>
+          <h3>Pagar.me</h3>
+          <p>Melhor para plataformas próprias com necessidade de customização e camada de billing construída em cima do gateway.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="t">Recomendação</div>
+        <p style="margin:0"><b>Vindi</b> se a assinatura é o coração do negócio. <b>Iugu</b> se quer velocidade de implantação e aproveitar o know-how que o time já tem. <b>Pagar.me</b> se a prioridade é construir uma camada própria em cima do gateway.</p>
+      </div>
+
+      <h2>Referências</h2>
+      <ul class="refs">
+        <li><a href="https://dev.iugu.com/docs/cobran%C3%A7a-recorrente-assinaturas" target="_blank" rel="noopener">Iugu — Cobrança recorrente (assinaturas)</a></li>
+        <li><a href="https://www.iugu.com/metodo-pagamento-pix" target="_blank" rel="noopener">Iugu — PIX</a></li>
+        <li><a href="https://vindi.com.br/servicos-financeiros/pagamento-recorrente/" target="_blank" rel="noopener">Vindi — Pagamento recorrente</a></li>
+        <li><a href="https://atendimento.vindi.com.br/hc/pt-br/articles/204706800" target="_blank" rel="noopener">Vindi — Emissão de NF</a></li>
+        <li><a href="https://stripe.com/br/pricing" target="_blank" rel="noopener">Stripe — Preços (referência internacional)</a></li>
+      </ul>
+    </section>
+
     <!-- NICE TO HAVE -->
     <section id="nice-to-have" class="section-block">
       <div class="page-head">
@@ -559,7 +789,7 @@
           <tr>
             <td><b>04</b></td>
             <td>Gateway definitivo</td>
-            <td>Iugu provável (know-how interno); comparar taxas de 1–3 opções.</td>
+            <td>Benchmark concluído: Vindi, Iugu e Pagar.me. Iugu com know-how interno.</td>
             <td>Workshop técnico + análise de custo</td>
           </tr>
         </tbody>
@@ -610,7 +840,7 @@
         <div class="card accent-left">
           <h3><span class="pill do">Imediato</span></h3>
           <ul class="check">
-            <li>Workshop gateway: validar Iugu vs alternativas</li>
+            <li>Workshop gateway: validar Vindi vs Iugu vs Pagar.me</li>
             <li>Fechar dúvidas de pacotes e freemium com Renato</li>
             <li>Continuar V0 backoffice (usuários ativos)</li>
             <li>Grooming V0 com Franco — escopo mínimo</li>
