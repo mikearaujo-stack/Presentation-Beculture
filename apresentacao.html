@@ -34,7 +34,6 @@
     <a href="#camadas"><span class="ico">▣</span> Três camadas</a>
     <a href="#produto"><span class="ico">◇</span> Módulo cliente</a>
     <a href="#gerenciamento"><span class="ico">⚑</span> Backoffice & CS</a>
-    <a href="#gateway"><span class="ico">⟳</span> Gateway (Iugu)</a>
     <a href="#benchmark"><span class="ico">⊞</span> Benchmark gateways</a>
 
     <div class="group-label">Avançar</div>
@@ -484,32 +483,6 @@
       </ul>
     </section>
 
-    <!-- GATEWAY -->
-    <section id="gateway" class="section-block">
-      <div class="page-head">
-        <span class="eyebrow">Camada 03</span>
-        <h1>Iugu como espinha dorsal</h1>
-        <p class="lead">Avaliar 1–3 gateways, mas priorizar o que o time já domina. APIs boas; SDK menos ideal — integração direta via API.</p>
-      </div>
-
-      <div class="grid grid-3">
-        <div class="card"><span class="card-kicker">Faz</span><h3>Assinaturas e cobrança</h3><p>Recorrência, faturas, e-mails, bloqueio por inadimplência.</p></div>
-        <div class="card"><span class="card-kicker">Faz</span><h3>Pagamentos</h3><p>Cartão, Pix, conciliação automática.</p></div>
-        <div class="card"><span class="card-kicker">Restringe</span><h3>Modelo possível</h3><p>O que desenhamos precisa caber no que o gateway permite fazer.</p></div>
-      </div>
-
-      <table>
-        <thead><tr><th>Critério</th><th>Iugu (provável)</th><th>Alternativa</th></tr></thead>
-        <tbody>
-          <tr><td><b>Know-how interno</b></td><td>Sim — time conhece o funcionamento</td><td>Curva de aprendizagem do zero</td></tr>
-          <tr><td><b>Taxas</b></td><td>Dentro do mercado</td><td>Pode ser ~5% menor</td></tr>
-          <tr><td><b>APIs</b></td><td>Boas</td><td>Variável</td></tr>
-          <tr><td><b>SDK</b></td><td>Fraco — usar API direta</td><td>—</td></tr>
-          <tr><td><b>Decisão</b></td><td colspan="2">Só migrar se economia compensar meses de reintegração</td></tr>
-        </tbody>
-      </table>
-    </section>
-
     <!-- BENCHMARK GATEWAYS -->
     <section id="benchmark" class="section-block">
       <div class="page-head">
@@ -559,6 +532,53 @@
         </table>
       </div>
 
+      <h2>Comparativo de taxas</h2>
+      <p class="benchmark-note">Valores aproximados de mercado e referências públicas — sujeitos a negociação por volume, segmento e contrato comercial.</p>
+      <div class="table-wrap">
+        <table class="benchmark-table benchmark-fees">
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Iugu</th>
+              <th>Vindi</th>
+              <th>Pagar.me</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>PIX</b></td>
+              <td>Negociado<span class="fee-ref">Ref. parceiros: R$ 1,50/transação</span></td>
+              <td>0,95%<span class="fee-ref">Mínimo R$ 1,60</span></td>
+              <td>~0,5% – 1%</td>
+            </tr>
+            <tr>
+              <td><b>Boleto</b></td>
+              <td>~R$ 0,65 – R$ 1,60<span class="fee-ref">Ref. parceiros: R$ 2,30/emissão</span></td>
+              <td>Negociado<span class="fee-ref">Depende de volume e contrato</span></td>
+              <td>Valor fixo<span class="fee-ref">Negociado por contrato</span></td>
+            </tr>
+            <tr>
+              <td><b>Cartão à vista</b></td>
+              <td>~3% – 5%<span class="fee-ref">Ref. parceiros: 3,34%</span></td>
+              <td>Negociado<span class="fee-ref">Depende de volume e contrato</span></td>
+              <td>~3% – 5%</td>
+            </tr>
+            <tr>
+              <td><b>Cartão parcelado</b></td>
+              <td>~4,28% – 4,79%<span class="fee-ref">Varia por número de parcelas</span></td>
+              <td>Negociado<span class="fee-ref">Depende de volume e contrato</span></td>
+              <td>~3% – 5%<span class="fee-ref">+ taxa por parcela (negociável)</span></td>
+            </tr>
+            <tr>
+              <td><b>Modelo comercial</b></td>
+              <td>Taxa por transação + planos por volume</td>
+              <td>Forte negociação comercial</td>
+              <td>Negociado por volume e MDR</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <h2>1. Iugu</h2>
       <p>Uma das plataformas brasileiras mais usadas para SaaS e negócios com cobrança recorrente. Módulo específico de <strong>assinaturas</strong>: planos, ciclos e cobranças automáticas.</p>
 
@@ -590,17 +610,8 @@
         <p>Criar cliente e assinatura, cancelar, consultar cobrança e receber eventos via webhook.</p>
       </div>
 
-      <h3>Taxas aproximadas (Brasil)</h3>
-      <p>Valores variam por contrato. Referências de mercado:</p>
-      <table>
-        <thead><tr><th>Método</th><th>Taxa</th></tr></thead>
-        <tbody>
-          <tr><td><b>PIX</b></td><td>Negociado / percentual baixo</td></tr>
-          <tr><td><b>Boleto</b></td><td>~R$ 0,65 a R$ 1,60 (volume)</td></tr>
-          <tr><td><b>Cartão</b></td><td>~3% a 5%</td></tr>
-        </tbody>
-      </table>
-      <p class="benchmark-note">Exemplo divulgado para parceiros: boleto R$ 2,30 · PIX R$ 1,50 · cartão à vista 3,34% · parcelado 4,28% a 4,79%.</p>
+      <h3>Taxas</h3>
+      <p>Detalhes no comparativo de taxas acima. Iugu publica referências para parceiros (boleto R$ 2,30 · PIX R$ 1,50 · cartão à vista 3,34% · parcelado 4,28% a 4,79%).</p>
 
       <h2>2. Vindi</h2>
       <p>Provavelmente a solução mais forte no Brasil quando o foco é <strong>assinatura e recorrência</strong>. Atende SaaS, clubes, educação, streaming e serviços mensais.</p>
@@ -629,8 +640,8 @@
         </div>
       </div>
 
-      <h3>Taxas aproximadas</h3>
-      <p>Negociação comercial frequente. Referência PIX: 0,95% (mínimo R$ 1,60). Cartão e boleto dependem de volume e contrato.</p>
+      <h3>Taxas</h3>
+      <p>Detalhes no comparativo de taxas acima. Vindi trabalha com negociação comercial — referência pública de PIX: 0,95% (mínimo R$ 1,60).</p>
 
       <h2>3. Pagar.me</h2>
       <p>Muito utilizado por empresas que precisam de API forte e flexibilidade — marketplaces, SaaS e plataformas próprias.</p>
@@ -658,15 +669,8 @@
         </div>
       </div>
 
-      <h3>Taxas aproximadas</h3>
-      <table>
-        <thead><tr><th>Método</th><th>Estimativa</th></tr></thead>
-        <tbody>
-          <tr><td><b>PIX</b></td><td>~0,5% – 1%</td></tr>
-          <tr><td><b>Cartão</b></td><td>~3% – 5%</td></tr>
-          <tr><td><b>Boleto</b></td><td>Valor fixo (negociado)</td></tr>
-        </tbody>
-      </table>
+      <h3>Taxas</h3>
+      <p>Detalhes no comparativo de taxas acima. Estimativas de mercado: PIX ~0,5%–1%, cartão ~3%–5%, boleto em valor fixo negociado.</p>
 
       <h2>Mecanismo de assinatura — cenário SaaS</h2>
       <p class="benchmark-note">Cliente compra plano Pro a R$ 199/mês:</p>
